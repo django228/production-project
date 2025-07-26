@@ -3,6 +3,7 @@ import {BuildOptions} from "./types/config";
 import {buildPlugins} from "./buildPlugins";
 import {buildLoaders} from "./buildLoaders";
 import {buildResolvers} from "./buildResolvers";
+import {buildDevServer} from "./buildDevServer";
 
 export function buildWebpackConfig(options: BuildOptions): webpack.Configuration {
     const {paths, mode} = options;
@@ -21,6 +22,8 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
             // Обрабатываем все типы файлов, выходящие за границы JS
             rules: buildLoaders()
         },
-        resolve: buildResolvers()
+        resolve: buildResolvers(),
+        devtool: options.isDev ? 'inline-source-map' : undefined,
+        devServer: options.isDev ? buildDevServer(options) : undefined
     }
 }
