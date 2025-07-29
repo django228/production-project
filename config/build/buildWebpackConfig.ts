@@ -20,7 +20,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
         module: {
             // Здесь конфигурируем лоадеры.
             // Обрабатываем все типы файлов, выходящие за границы JS
-            rules: buildLoaders()
+            rules: buildLoaders(options)
         },
         resolve: buildResolvers(),
         devtool: options.isDev ? 'inline-source-map' : undefined,
