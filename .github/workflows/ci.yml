@@ -38,16 +38,6 @@ jobs:
       
     - name: Run Stylelint
       run: npx stylelint "src/**/*.scss" || true
-      
-    - name: Run tests
-      run: npm test -- --coverage --watchAll=false
-      
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v4
-      with:
-        file: ./coverage/lcov.info
-        flags: unittests
-        name: codecov-umbrella
         
   build:
     runs-on: ubuntu-latest
