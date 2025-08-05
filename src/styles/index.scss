@@ -1,0 +1,13 @@
+@import "themes/dark-theme";
+@import "themes/light-theme";
+@import "variables/global";
+@import "reset";
+
+.app {
+  font: var(--font-m);
+
+  background: var(--bg-color);
+  color: var(--primary-color);
+
+  min-height: 100vh; // растягиваем на всю высоту
+}
