@@ -1,24 +1,22 @@
 {
   "name": "production-project",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.ts",
+  "description": "React TypeScript production project",
+  "private": true,
   "scripts": {
     "start": "webpack serve --env port=3000",
     "build:prod": "webpack --env mode=production",
-    "build:dev": "webpack --env mode=development"
+    "build:dev": "webpack --env mode=development",
+    "test": "jest --passWithNoTests",
+    "test:ui": "loki test",
+    "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static",
+    "storybook": "start-storybook -p 6006 -c .storybook",
+    "build-storybook": "build-storybook -c .storybook -o storybook-static",
+    "lint:ts": "eslint \"**/*.{ts,tsx}\"",
+    "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
+    "lint:scss": "stylelint \"**/*.scss\"",
+    "lint:scss:fix": "stylelint \"**/*.scss\" --fix"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/django228/production-project.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/django228/production-project/issues"
-  },
-  "homepage": "https://github.com/django228/production-project#readme",
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@babel/preset-env": "^7.16.11",
@@ -84,11 +82,9 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.0",
     "axios": "^1.6.0",
-    "concurrently": "^7.0.0",
     "i18next": "^21.6.11",
     "i18next-browser-languagedetector": "^6.1.3",
     "i18next-http-backend": "^1.3.2",
-    "prompt-sync": "^4.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-i18next": "^11.15.5",

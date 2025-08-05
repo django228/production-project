@@ -1,0 +1,42 @@
+name: Build and Deploy Storybook
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18.x'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build Storybook
+      run: npm run build-storybook
+      
+    - name: Deploy Storybook to GitHub Pages
+      if: github.ref == 'refs/heads/main'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./storybook-static
+        destination_dir: storybook
+        
+    - name: Upload Storybook artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: storybook-static
+        path: storybook-static/
+        retention-days: 7
