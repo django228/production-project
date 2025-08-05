@@ -1,53 +1,53 @@
 name: Auto Format Code
 
 on:
-    pull_request:
-        branches: [main, develop]
+  pull_request:
+    branches: [ main, develop ]
 
 permissions:
-    contents: write
-    pull-requests: write
+  contents: write
+  pull-requests: write
 
 jobs:
-    format:
-        runs-on: ubuntu-latest
-
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v4
-              with:
-                  token: ${{ secrets.GITHUB_TOKEN }}
-                  ref: ${{ github.head_ref }}
-
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: '18.x'
-                  cache: 'npm'
-
-            - name: Install dependencies
-              run: npm ci
-
-            - name: Run ESLint with auto-fix
-              run: npx eslint "src/**/*.{ts,tsx}" --fix
-
-            - name: Run Prettier
-              run: npx prettier --write "src/**/*.{ts,tsx,scss,css,json}"
-
-            - name: Check for changes
-              id: verify-changed-files
-              run: |
-                  if [ -n "$(git status --porcelain)" ]; then
-                    echo "changed=true" >> $GITHUB_OUTPUT
-                  else
-                    echo "changed=false" >> $GITHUB_OUTPUT
-                  fi
-
-            - name: Commit changes
-              if: steps.verify-changed-files.outputs.changed == 'true'
-              run: |
-                  git config --local user.email "action@github.com"
-                  git config --local user.name "GitHub Action"
-                  git add .
-                  git commit -m "🎨 Auto-format code with ESLint and Prettier"
-                  git push
+  format:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        ref: ${{ github.head_ref }}
+        
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18.x'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm install
+      
+    - name: Run ESLint with auto-fix
+      run: npx eslint "src/**/*.{ts,tsx}" --fix
+      
+    - name: Run Prettier
+      run: npx prettier --write "src/**/*.{ts,tsx,scss,css,json}"
+      
+    - name: Check for changes
+      id: verify-changed-files
+      run: |
+        if [ -n "$(git status --porcelain)" ]; then
+          echo "changed=true" >> $GITHUB_OUTPUT
+        else
+          echo "changed=false" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Commit changes
+      if: steps.verify-changed-files.outputs.changed == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git commit -m "🎨 Auto-format code with ESLint and Prettier"
+        git push
