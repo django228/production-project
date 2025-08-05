@@ -1,12 +1,11 @@
-import React, {Suspense} from "react";
+import React from "react";
 import './styles/index.scss';
-import {Route, Routes, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 import {Button} from "@storybook/react/demo";
 import {useTheme} from "app/hooks";
 import {classNames} from "helpers/classNames/classNames";
-import {AboutPage} from "pages/AboutPage";
-import {MainPage} from "pages/MainPage";
+import {AppRouter} from "app/router";
 
 const App = () => {
     const { theme, toggleTheme } = useTheme();
@@ -17,13 +16,8 @@ const App = () => {
             <br></br>
             <Link to={"/"}>Главная</Link>
             <Link to={"/about"}>О сайте</Link>
+            <AppRouter />
 
-            <Suspense fallback={<div>Loading...</div>}>
-                <Routes>
-                    <Route path={"/about"} element={<AboutPage/>}/>
-                    <Route path={"/"} element={<MainPage/>}/>
-                </Routes>
-            </Suspense>
         </div>
     );
 };
