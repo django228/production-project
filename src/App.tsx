@@ -7,12 +7,13 @@ import {AboutPageAsync} from "./pages/AboutPage/AboutPage.async";
 import {MainPageAsync} from "./pages/MainPage/MainPage.async";
 import {Button} from "@storybook/react/demo";
 import {useTheme} from "./hooks/useTheme";
+import {classNames} from "./helpers/classNames/classNames";
 
 const App = () => {
     const { theme, toggleTheme } = useTheme();
 
     return (
-        <div className={`app ${theme}`}>
+        <div className={classNames('app', {}, [theme])}>
             <Button onClick={toggleTheme}>theme</Button>
             <br></br>
             <Link to={"/"}>Главная</Link>
