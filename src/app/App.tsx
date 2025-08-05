@@ -1,7 +1,6 @@
 import React from "react";
 import './styles/index.scss';
 
-import {Button} from "@storybook/react/demo";
 import {useTheme} from "app/hooks";
 import {classNames} from "helpers/classNames/classNames";
 import {AppRouter} from "app/router";
@@ -12,7 +11,7 @@ const App = () => {
 
     return (
         <div className={classNames('app', {}, [theme])}>
-            <Button onClick={toggleTheme}>theme</Button>
+            <button onClick={toggleTheme}>Toggle Theme</button>
             <br></br>
             <Navbar />
             <AppRouter />
