@@ -1,11 +1,11 @@
 import React from "react";
 import './styles/index.scss';
-import {Link} from "react-router-dom";
 
 import {Button} from "@storybook/react/demo";
 import {useTheme} from "app/hooks";
 import {classNames} from "helpers/classNames/classNames";
 import {AppRouter} from "app/router";
+import {Navbar} from "widgets/Navbar";
 
 const App = () => {
     const { theme, toggleTheme } = useTheme();
@@ -14,8 +14,7 @@ const App = () => {
         <div className={classNames('app', {}, [theme])}>
             <Button onClick={toggleTheme}>theme</Button>
             <br></br>
-            <Link to={"/"}>Главная</Link>
-            <Link to={"/about"}>О сайте</Link>
+            <Navbar />
             <AppRouter />
 
         </div>
