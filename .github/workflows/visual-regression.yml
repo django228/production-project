@@ -31,7 +31,7 @@ jobs:
       
     - name: Upload visual test results
       if: failure()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: loki-differences
         path: .loki/
@@ -39,7 +39,7 @@ jobs:
         
     - name: Comment PR with visual changes
       if: github.event_name == 'pull_request' && failure()
-      uses: actions/github-script@v6
+      uses: actions/github-script@v7
       with:
         script: |
           github.rest.issues.createComment({
