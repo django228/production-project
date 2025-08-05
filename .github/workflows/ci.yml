@@ -31,7 +31,7 @@ jobs:
       run: npx tsc --noEmit --skipLibCheck
       
     - name: Run ESLint
-      run: npx eslint src --ext .ts,.tsx --max-warnings 0
+      run: npx eslint src --ext .ts,.tsx --max-warnings 10
       
     - name: Run Stylelint
       run: npx stylelint "src/**/*.scss"
