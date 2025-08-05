@@ -1,0 +1,9 @@
+build/
+node_modules/
+public/
+*.config.js
+*.config.ts
+coverage/
+dist/
+.storybook/
+storybook-static/
