@@ -1,141 +1,141 @@
 name: Code Quality (Auto-fix)
 
 on:
-  pull_request:
-    branches: [ main, develop ]
+    pull_request:
+        branches: [main, develop]
 
 permissions:
-  contents: write
-  pull-requests: write
+    contents: write
+    pull-requests: write
 
 jobs:
-  quality:
-    runs-on: ubuntu-latest
+    quality:
+        runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        ref: ${{ github.head_ref }}
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+              with:
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  ref: ${{ github.head_ref }}
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18.x'
-        cache: 'npm'
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '18.x'
+                  cache: 'npm'
 
-    - name: Install dependencies
-      run: npm ci || npm install
+            - name: Install dependencies
+              run: npm ci || npm install
 
-    - name: Initial checks (collect, don't fail)
-      id: checks
-      run: |
-        set +e
-        prettier_out=$(npx prettier --check "src/**/*.{ts,tsx,scss,css,json}" 2>&1); pr_exit=$?
-        eslint_out=$(npx eslint "src/**/*.{ts,tsx}" --max-warnings 0 2>&1); es_exit=$?
-        stylelint_out=$(npx stylelint "src/**/*.scss" 2>&1); st_exit=$?
-        tsc_out=$(npx tsc --noEmit --skipLibCheck 2>&1); ts_exit=$?
+            - name: Initial checks (collect, don't fail)
+              id: checks
+              run: |
+                  set +e
+                  prettier_out=$(npx prettier --check "src/**/*.{ts,tsx,scss,css,json}" 2>&1); pr_exit=$?
+                  eslint_out=$(npx eslint "src/**/*.{ts,tsx}" --max-warnings 0 2>&1); es_exit=$?
+                  stylelint_out=$(npx stylelint "src/**/*.scss" 2>&1); st_exit=$?
+                  tsc_out=$(npx tsc --noEmit --skipLibCheck 2>&1); ts_exit=$?
 
-        echo "prettier_exit=$pr_exit" >> $GITHUB_OUTPUT
-        echo "eslint_exit=$es_exit" >> $GITHUB_OUTPUT
-        echo "stylelint_exit=$st_exit" >> $GITHUB_OUTPUT
-        echo "tsc_exit=$ts_exit" >> $GITHUB_OUTPUT
+                  echo "prettier_exit=$pr_exit" >> $GITHUB_OUTPUT
+                  echo "eslint_exit=$es_exit" >> $GITHUB_OUTPUT
+                  echo "stylelint_exit=$st_exit" >> $GITHUB_OUTPUT
+                  echo "tsc_exit=$ts_exit" >> $GITHUB_OUTPUT
 
-        mkdir -p .quality-logs
-        echo "$prettier_out" > .quality-logs/prettier.txt
-        echo "$eslint_out" > .quality-logs/eslint.txt
-        echo "$stylelint_out" > .quality-logs/stylelint.txt
-        echo "$tsc_out" > .quality-logs/tsc.txt
+                  mkdir -p .quality-logs
+                  echo "$prettier_out" > .quality-logs/prettier.txt
+                  echo "$eslint_out" > .quality-logs/eslint.txt
+                  echo "$stylelint_out" > .quality-logs/stylelint.txt
+                  echo "$tsc_out" > .quality-logs/tsc.txt
 
-        if [ $pr_exit -ne 0 ] || [ $es_exit -ne 0 ] || [ $st_exit -ne 0 ]; then
-          echo "needs_fix=true" >> $GITHUB_OUTPUT
-        else
-          echo "needs_fix=false" >> $GITHUB_OUTPUT
-        fi
-      continue-on-error: true
+                  if [ $pr_exit -ne 0 ] || [ $es_exit -ne 0 ] || [ $st_exit -ne 0 ]; then
+                    echo "needs_fix=true" >> $GITHUB_OUTPUT
+                  else
+                    echo "needs_fix=false" >> $GITHUB_OUTPUT
+                  fi
+              continue-on-error: true
 
-    - name: Auto-fix (Prettier, ESLint, Stylelint)
-      if: steps.checks.outputs.needs_fix == 'true'
-      run: |
-        npx prettier --write "src/**/*.{ts,tsx,scss,css,json}"
-        npx eslint "src/**/*.{ts,tsx}" --fix
-        npx stylelint "src/**/*.scss" --fix
+            - name: Auto-fix (Prettier, ESLint, Stylelint)
+              if: steps.checks.outputs.needs_fix == 'true'
+              run: |
+                  npx prettier --write "src/**/*.{ts,tsx,scss,css,json}"
+                  npx eslint "src/**/*.{ts,tsx}" --fix
+                  npx stylelint "src/**/*.scss" --fix
 
-    - name: Commit auto-fixes
-      id: commit
-      if: steps.checks.outputs.needs_fix == 'true'
-      run: |
-        if [ -n "$(git status --porcelain)" ]; then
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add -A
-          git commit -m "🎨 Auto-fix code formatting and linting issues"
-          git push
-          echo "fixed_and_committed=true" >> $GITHUB_OUTPUT
-        else
-          echo "fixed_and_committed=false" >> $GITHUB_OUTPUT
-        fi
+            - name: Commit auto-fixes
+              id: commit
+              if: steps.checks.outputs.needs_fix == 'true'
+              run: |
+                  if [ -n "$(git status --porcelain)" ]; then
+                    git config --local user.email "action@github.com"
+                    git config --local user.name "GitHub Action"
+                    git add -A
+                    git commit -m "Auto-fix code formatting and linting issues"
+                    git push
+                    echo "fixed_and_committed=true" >> $GITHUB_OUTPUT
+                  else
+                    echo "fixed_and_committed=false" >> $GITHUB_OUTPUT
+                  fi
 
-    - name: Re-run checks after auto-fix (collect, don't fail)
-      id: recheck
-      if: steps.checks.outputs.needs_fix == 'true' || steps.checks.outputs.tsc_exit != '0'
-      run: |
-        set +e
-        npx prettier --check "src/**/*.{ts,tsx,scss,css,json}"; pr_exit=$?
-        npx eslint "src/**/*.{ts,tsx}" --max-warnings 0; es_exit=$?
-        npx stylelint "src/**/*.scss"; st_exit=$?
-        npx tsc --noEmit --skipLibCheck; ts_exit=$?
+            - name: Re-run checks after auto-fix (collect, don't fail)
+              id: recheck
+              if: steps.checks.outputs.needs_fix == 'true' || steps.checks.outputs.tsc_exit != '0'
+              run: |
+                  set +e
+                  npx prettier --check "src/**/*.{ts,tsx,scss,css,json}"; pr_exit=$?
+                  npx eslint "src/**/*.{ts,tsx}" --max-warnings 0; es_exit=$?
+                  npx stylelint "src/**/*.scss"; st_exit=$?
+                  npx tsc --noEmit --skipLibCheck; ts_exit=$?
 
-        echo "prettier_exit=$pr_exit" >> $GITHUB_OUTPUT
-        echo "eslint_exit=$es_exit" >> $GITHUB_OUTPUT
-        echo "stylelint_exit=$st_exit" >> $GITHUB_OUTPUT
-        echo "tsc_exit=$ts_exit" >> $GITHUB_OUTPUT
-      continue-on-error: true
+                  echo "prettier_exit=$pr_exit" >> $GITHUB_OUTPUT
+                  echo "eslint_exit=$es_exit" >> $GITHUB_OUTPUT
+                  echo "stylelint_exit=$st_exit" >> $GITHUB_OUTPUT
+                  echo "tsc_exit=$ts_exit" >> $GITHUB_OUTPUT
+              continue-on-error: true
 
-    - name: Upload logs
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: code-quality-logs
-        path: .quality-logs
+            - name: Upload logs
+              if: always()
+              uses: actions/upload-artifact@v4
+              with:
+                  name: code-quality-logs
+                  path: .quality-logs
 
-    - name: Comment summary on PR
-      if: always()
-      uses: actions/github-script@v7
-      with:
-        script: |
-          const fixed = '${{ steps.commit.outputs.fixed_and_committed || 'false' }}' === 'true';
-          const initial = {
-            prettier: '${{ steps.checks.outputs.prettier_exit }}',
-            eslint: '${{ steps.checks.outputs.eslint_exit }}',
-            stylelint: '${{ steps.checks.outputs.stylelint_exit }}',
-            tsc: '${{ steps.checks.outputs.tsc_exit }}',
-          };
-          const after = {
-            prettier: '${{ steps.recheck.outputs.prettier_exit || '' }}',
-            eslint: '${{ steps.recheck.outputs.eslint_exit || '' }}',
-            stylelint: '${{ steps.recheck.outputs.stylelint_exit || '' }}',
-            tsc: '${{ steps.recheck.outputs.tsc_exit || '' }}',
-          };
+            - name: Comment summary on PR
+              if: always()
+              uses: actions/github-script@v7
+              with:
+                  script: |
+                      const fixed = '${{ steps.commit.outputs.fixed_and_committed || 'false' }}' === 'true';
+                      const initial = {
+                        prettier: '${{ steps.checks.outputs.prettier_exit }}',
+                        eslint: '${{ steps.checks.outputs.eslint_exit }}',
+                        stylelint: '${{ steps.checks.outputs.stylelint_exit }}',
+                        tsc: '${{ steps.checks.outputs.tsc_exit }}',
+                      };
+                      const after = {
+                        prettier: '${{ steps.recheck.outputs.prettier_exit || '' }}',
+                        eslint: '${{ steps.recheck.outputs.eslint_exit || '' }}',
+                        stylelint: '${{ steps.recheck.outputs.stylelint_exit || '' }}',
+                        tsc: '${{ steps.recheck.outputs.tsc_exit || '' }}',
+                      };
 
-          const row = (name, before, after) => `- ${name}: ${before === '0' ? '✅' : '❌'}${after ? ` → ${after === '0' ? '✅' : '❌'}` : ''}`;
+                      const row = (name, before, after) => `- ${name}: ${before === '0' ? '✅' : '❌'}${after ? ` → ${after === '0' ? '✅' : '❌'}` : ''}`;
 
-          const lines = [];
-          lines.push('🧹 Code quality check completed.');
-          lines.push(fixed ? '• Auto-fixes were applied and pushed to this branch.' : '• No auto-fixes were needed or applicable.');
-          lines.push('');
-          lines.push('Results:');
-          lines.push(row('Prettier', initial.prettier, after.prettier));
-          lines.push(row('ESLint', initial.eslint, after.eslint));
-          lines.push(row('Stylelint', initial.stylelint, after.stylelint));
-          lines.push(row('TypeScript', initial.tsc, after.tsc));
-          lines.push('');
-          lines.push('_Note: This workflow intentionally does not fail PRs. If issues remain after auto-fix, please resolve them manually._');
+                      const lines = [];
+                      lines.push('Code quality check completed.');
+                      lines.push(fixed ? '• Auto-fixes were applied and pushed to this branch.' : '• No auto-fixes were needed or applicable.');
+                      lines.push('');
+                      lines.push('Results:');
+                      lines.push(row('Prettier', initial.prettier, after.prettier));
+                      lines.push(row('ESLint', initial.eslint, after.eslint));
+                      lines.push(row('Stylelint', initial.stylelint, after.stylelint));
+                      lines.push(row('TypeScript', initial.tsc, after.tsc));
+                      lines.push('');
+                      lines.push('_Note: This workflow intentionally does not fail PRs. If issues remain after auto-fix, please resolve them manually._');
 
-          await github.rest.issues.createComment({
-            issue_number: context.issue.number,
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            body: lines.join('\n')
-          });
+                      await github.rest.issues.createComment({
+                        issue_number: context.issue.number,
+                        owner: context.repo.owner,
+                        repo: context.repo.repo,
+                        body: lines.join('\n')
+                      });
