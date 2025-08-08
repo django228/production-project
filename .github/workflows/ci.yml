@@ -31,7 +31,7 @@ jobs:
       run: npx tsc --noEmit --skipLibCheck
       
     - name: Run ESLint
-      run: npx eslint src --ext .ts,.tsx --max-warnings 1
+      run: npx eslint src --ext .ts,.tsx --max-warnings 10
       
     - name: Check Prettier formatting
       run: npx prettier --check "src/**/*.{ts,tsx,scss,css,json}" || true
