@@ -14,13 +14,26 @@
     "format": "prettier --write \"src/**/*.{ts,tsx,scss,css,json}\"",
     "format:check": "prettier --check \"src/**/*.{ts,tsx,scss,css,json}\""
   },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "config/git/commitizen.js"
+    }
+},
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS -g './config/git/commitlint.js'"
+    }
+},
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
-    "@svgr/webpack": "^6.2.1",
+    "@svgr/webpack": "^6.5.1",
     "@types/node": "^17.0.21",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
@@ -34,6 +47,7 @@
     "babel-plugin-i18next-extract": "^0.8.3",
     "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.6.0",
+    "cz-customizable": "^7.4.0",
     "eslint": "^8.10.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-i18next": "^5.1.2",
@@ -43,6 +57,7 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "@commitlint/cli": "^7.2.1",
     "husky": "^7.0.0",
     "json-server": "^0.17.0",
     "mini-css-extract-plugin": "^2.9.2",
@@ -54,6 +69,7 @@
     "style-loader": "^3.3.1",
     "stylelint": "^14.5.3",
     "stylelint-config-standard-scss": "^3.0.0",
+    "svg-inline-loader": "^0.8.2",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.5.0",
     "typescript": "^4.5.5",
@@ -65,12 +81,12 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.0",
     "axios": "^1.6.0",
-    "i18next": "^21.6.11",
-    "i18next-browser-languagedetector": "^6.1.3",
-    "i18next-http-backend": "^1.3.2",
+    "i18next": "^21.10.0",
+    "i18next-browser-languagedetector": "^6.1.8",
+    "i18next-http-backend": "^1.4.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-i18next": "^11.15.5",
+    "react-i18next": "^11.18.6",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1"
   }

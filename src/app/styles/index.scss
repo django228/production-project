@@ -11,3 +11,12 @@
 
   min-height: 100vh; // растягиваем на всю высоту
 }
+
+.content-page {
+  display: flex;
+}
+
+.page-wrapper {
+  flex-grow: 1;
+  padding: 20px;
+}
