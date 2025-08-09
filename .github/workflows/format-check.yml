@@ -3,6 +3,9 @@ name: Code Quality (Auto-fix)
 on:
     pull_request:
         branches: [main, develop]
+    push:
+        branches: [main, develop]
+    workflow_dispatch:
 
 permissions:
     contents: write
@@ -13,11 +16,15 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checkout code
+            - name: Checkout code (PR)
+              if: github.event_name == 'pull_request'
               uses: actions/checkout@v4
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}
                   ref: ${{ github.head_ref }}
+            - name: Checkout code
+              if: github.event_name != 'pull_request'
+              uses: actions/checkout@v4
 
             - name: Setup Node.js
               uses: actions/setup-node@v4
@@ -64,7 +71,7 @@ jobs:
 
             - name: Commit auto-fixes
               id: commit
-              if: steps.checks.outputs.needs_fix == 'true'
+              if: steps.checks.outputs.needs_fix == 'true' && github.event_name == 'pull_request'
               run: |
                   if [ -n "$(git status --porcelain)" ]; then
                     git config --local user.email "action@github.com"
@@ -101,7 +108,7 @@ jobs:
                   path: .quality-logs
 
             - name: Comment summary on PR
-              if: always()
+              if: github.event_name == 'pull_request'
               uses: actions/github-script@v7
               with:
                   script: |
