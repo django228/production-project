@@ -1,9 +1,18 @@
 Checking formatting...
 [warn] src/app/providers/ui/ThemeProvider.tsx
+[warn] src/app/styles/index.scss
+[warn] src/app/styles/reset.scss
+[warn] src/app/styles/themes/dark-theme.scss
+[warn] src/app/styles/themes/light-theme.scss
 [warn] src/app/styles/variables/global.scss
 [warn] src/index.tsx
 [warn] src/pages/AboutPage/ui/AboutPage.async.tsx
 [warn] src/pages/MainPage/ui/MainPage.async.tsx
+[warn] src/shared/ui/AppLink/AppLink.module.scss
 [warn] src/shared/ui/AppLink/AppLink.tsx
+[warn] src/shared/ui/Button/Button.module.scss
 [warn] src/shared/ui/Button/Button.tsx
-[warn] Code style issues found in 7 files. Forgot to run Prettier?
+[warn] src/widgets/LangSwitcher/ui/LangSwitcher.module.scss
+[warn] src/widgets/Navbar/ui/Navbar.module.scss
+[warn] src/widgets/Sidebar/ui/Sidebar/Sidebar.module.scss
+[warn] Code style issues found in 16 files. Forgot to run Prettier?
