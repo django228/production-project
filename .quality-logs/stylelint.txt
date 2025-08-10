@@ -1,5 +1,96 @@
 
+src/app/styles/index.scss
+  [2m1:9[22m  [31m[31m✖[39m  Expected double quotes            [2mstring-quotes[22m
+  [2m2:9[22m  [31m[31m✖[39m  Expected double quotes            [2mstring-quotes[22m
+  [2m3:9[22m  [31m[31m✖[39m  Expected double quotes            [2mstring-quotes[22m
+  [2m4:9[22m  [31m[31m✖[39m  Expected double quotes            [2mstring-quotes[22m
+  [2m7:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+  [2m9:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m10:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m12:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m16:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m20:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m21:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+
+src/app/styles/reset.scss
+  [2m2:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+  [2m3:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+  [2m4:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m11:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m13:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+
+src/app/styles/themes/dark-theme.scss
+ [2m2:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m3:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m5:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m6:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m7:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m8:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+
+src/app/styles/themes/light-theme.scss
+ [2m2:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m3:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m5:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m6:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m7:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m8:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+
+src/app/styles/variables/global.scss
+  [2m2:5[22m   [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+  [2m2:35[22m  [31m[31m✖[39m  Expected double quotes            [2mstring-quotes[22m
+  [2m4:5[22m   [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+  [2m5:5[22m   [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+  [2m6:5[22m   [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+  [2m8:5[22m   [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+  [2m9:5[22m   [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m10:5[22m   [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m12:5[22m   [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m13:5[22m   [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m14:5[22m   [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m15:5[22m   [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+
+src/shared/ui/AppLink/AppLink.module.scss
+  [2m2:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+  [2m6:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m10:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+
+src/shared/ui/Button/Button.module.scss
+ [2m2:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m6:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m7:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m8:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m9:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+
+src/widgets/LangSwitcher/ui/LangSwitcher.module.scss
+ [2m2:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m3:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m4:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m5:9[22m  [31m[31m✖[39m  Expected indentation of 4 spaces  [2mindentation[22m
+ [2m6:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+
+src/widgets/Navbar/ui/Navbar.module.scss
+  [2m2:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+  [2m3:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+  [2m4:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+  [2m5:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+  [2m6:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+  [2m7:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m11:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m15:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+
 src/widgets/ThemeSwitcher/ui/ThemeSwitcher.module.scss
  [2m1:1[22m  [31m[31m✖[39m  Unexpected empty source  [2mno-empty-source[22m
 
-1 problem ([31m1 error[39m, [33m0 warnings[39m)
+src/widgets/Sidebar/ui/Sidebar/Sidebar.module.scss
+  [2m2:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+  [2m3:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+  [2m4:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+  [2m6:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+  [2m7:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m11:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m15:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m16:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m17:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m18:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+
+72 problems ([31m72 errors[39m, [33m0 warnings[39m)

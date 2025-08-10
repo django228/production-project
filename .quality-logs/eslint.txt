@@ -1,1 +1,25 @@
 
+/home/runner/work/production-project/production-project/src/app/providers/ui/ThemeProvider.tsx
+  14:16  error  Missing trailing comma  comma-dangle
+
+/home/runner/work/production-project/production-project/src/index.tsx
+  14:36  error  Missing trailing comma  comma-dangle
+
+/home/runner/work/production-project/production-project/src/pages/AboutPage/ui/AboutPage.async.tsx
+  5:9   error  Expected no linebreak before this expression  implicit-arrow-linebreak
+  8:11  error  Missing trailing comma                        comma-dangle
+
+/home/runner/work/production-project/production-project/src/pages/MainPage/ui/MainPage.async.tsx
+  5:9   error  Expected no linebreak before this expression  implicit-arrow-linebreak
+  8:11  error  Missing trailing comma                        comma-dangle
+
+/home/runner/work/production-project/production-project/src/shared/ui/AppLink/AppLink.tsx
+  17:11  error  Expected a line break after this opening brace   object-curly-newline
+  17:82  error  Expected a line break before this closing brace  object-curly-newline
+
+/home/runner/work/production-project/production-project/src/shared/ui/Button/Button.tsx
+  15:11  error  Expected a line break after this opening brace   object-curly-newline
+  15:55  error  Expected a line break before this closing brace  object-curly-newline
+
+✖ 10 problems (10 errors, 0 warnings)
+  10 errors and 0 warnings potentially fixable with the `--fix` option.
