@@ -7,12 +7,12 @@
     "start": "webpack serve --env port=3000",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
-    "lint:ts": "eslint \"**/*.{ts,tsx}\"",
-    "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
-    "lint:scss": "stylelint \"**/*.scss\"",
-    "lint:scss:fix": "stylelint \"**/*.scss\" --fix",
-    "format": "prettier --write \"src/**/*.{ts,tsx,scss,css,json}\"",
-    "format:check": "prettier --check \"src/**/*.{ts,tsx,scss,css,json}\""
+    "lint:ts": "eslint \"**/*.{ts,tsx}\" --config config/eslint/.eslintrc.js",
+    "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --config config/eslint/.eslintrc.js --fix",
+    "lint:scss": "stylelint \"**/*.scss\" --config config/stylelint/.stylelintrc.js",
+    "lint:scss:fix": "stylelint \"**/*.scss\" --config config/stylelint/.stylelintrc.js --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx,scss,css,json}\" --config config/prettier/.prettierrc",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,scss,css,json}\" --config config/prettier/.prettierrc"
   },
   "config": {
     "commitizen": {
