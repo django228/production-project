@@ -65,24 +65,44 @@ jobs:
             - name: Auto-fix (Prettier, ESLint, Stylelint)
               if: steps.checks.outputs.needs_fix == 'true'
               run: |
-                  npx prettier --write "src/**/*.{ts,tsx,scss,css,json}"
-                  npx eslint "src/**/*.{ts,tsx}" --fix
-                  npx stylelint "src/**/*.scss" --fix
+                  echo "Running auto-fixes..."
+                  npx prettier --write "src/**/*.{ts,tsx,scss,css,json}" || true
+                  npx eslint "src/**/*.{ts,tsx}" --fix --max-warnings 0 || true
+                  npx stylelint "src/**/*.scss" --fix || true
+                  echo "Auto-fixes completed"
+              continue-on-error: true
 
             - name: Commit auto-fixes
               id: commit
-              if: steps.checks.outputs.needs_fix == 'true' && github.event_name == 'pull_request'
+              if: steps.checks.outputs.needs_fix == 'true'
               run: |
+                  git config --local user.email "action@github.com"
+                  git config --local user.name "GitHub Action"
+                  
                   if [ -n "$(git status --porcelain)" ]; then
-                    git config --local user.email "action@github.com"
-                    git config --local user.name "GitHub Action"
+                    echo "Changes detected, committing auto-fixes..."
                     git add -A
-                    git commit -m "Auto-fix code formatting and linting issues"
-                    git push
+                    git commit -m "Auto-fix: code formatting and linting issues
+                    
+                    - Applied Prettier formatting
+                    - Fixed ESLint issues where possible
+                    - Applied Stylelint fixes
+                    
+                    [skip ci]"
+                    
+                    if [ "${{ github.event_name }}" == "pull_request" ]; then
+                      git push
+                      echo "Changes pushed to PR branch"
+                    else
+                      git push origin ${{ github.ref_name }}
+                      echo "Changes pushed to ${{ github.ref_name }}"
+                    fi
                     echo "fixed_and_committed=true" >> $GITHUB_OUTPUT
                   else
+                    echo "No changes needed after auto-fix"
                     echo "fixed_and_committed=false" >> $GITHUB_OUTPUT
                   fi
+              continue-on-error: true
 
             - name: Re-run checks after auto-fix (collect, don't fail)
               id: recheck
@@ -109,6 +129,7 @@ jobs:
 
             - name: Comment summary on PR
               if: github.event_name == 'pull_request'
+              continue-on-error: true
               uses: actions/github-script@v7
               with:
                   script: |
@@ -126,7 +147,7 @@ jobs:
                         tsc: '${{ steps.recheck.outputs.tsc_exit || '' }}',
                       };
 
-                      const row = (name, before, after) => `- ${name}: ${before === '0' ? '✅' : '❌'}${after ? ` → ${after === '0' ? '✅' : '❌'}` : ''}`;
+                      const row = (name, before, after) => `- ${name}: ${before === '0' ? 'PASS' : 'FAIL'}${after ? ` -> ${after === '0' ? 'PASS' : 'FAIL'}` : ''}`;
 
                       const lines = [];
                       lines.push('Code quality check completed.');
