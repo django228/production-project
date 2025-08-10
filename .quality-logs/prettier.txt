@@ -1,0 +1,9 @@
+Checking formatting...
+[warn] src/app/providers/ui/ThemeProvider.tsx
+[warn] src/app/styles/variables/global.scss
+[warn] src/index.tsx
+[warn] src/pages/AboutPage/ui/AboutPage.async.tsx
+[warn] src/pages/MainPage/ui/MainPage.async.tsx
+[warn] src/shared/ui/AppLink/AppLink.tsx
+[warn] src/shared/ui/Button/Button.tsx
+[warn] Code style issues found in 7 files. Forgot to run Prettier?
