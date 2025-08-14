@@ -9,7 +9,6 @@ Checking formatting...
 [warn] src/index.tsx
 [warn] src/pages/AboutPage/ui/AboutPage.async.tsx
 [warn] src/pages/MainPage/ui/MainPage.async.tsx
-[warn] src/pages/NotFoundPage/index.ts
 [warn] src/pages/NotFoundPage/ui/NotFoundPage-hacker.module.scss
 [warn] src/pages/NotFoundPage/ui/NotFoundPage-matrix.module.scss
 [warn] src/pages/NotFoundPage/ui/NotFoundPage.async.tsx
@@ -23,4 +22,4 @@ Checking formatting...
 [warn] src/widgets/Navbar/ui/Navbar.module.scss
 [warn] src/widgets/PageLoader/ui/PageLoader.module.scss
 [warn] src/widgets/Sidebar/ui/Sidebar/Sidebar.module.scss
-[warn] Code style issues found in 24 files. Forgot to run Prettier?
+[warn] Code style issues found in 23 files. Forgot to run Prettier?
