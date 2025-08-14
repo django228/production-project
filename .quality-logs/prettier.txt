@@ -1,5 +1,6 @@
 Checking formatting...
 [warn] src/app/providers/ui/ThemeProvider.tsx
+[warn] src/app/router/ui/AppRouter.tsx
 [warn] src/app/styles/index.scss
 [warn] src/app/styles/reset.scss
 [warn] src/app/styles/themes/dark-theme.scss
@@ -15,5 +16,7 @@ Checking formatting...
 [warn] src/shared/ui/Button/Button.tsx
 [warn] src/widgets/LangSwitcher/ui/LangSwitcher.module.scss
 [warn] src/widgets/Navbar/ui/Navbar.module.scss
+[warn] src/widgets/PageLoader/ui/PageLoader.module.scss
+[warn] src/widgets/PageLoader/ui/PageLoader.tsx
 [warn] src/widgets/Sidebar/ui/Sidebar/Sidebar.module.scss
-[warn] Code style issues found in 17 files. Forgot to run Prettier?
+[warn] Code style issues found in 20 files. Forgot to run Prettier?
