@@ -27,14 +27,20 @@ export default {
         'json',
         'node',
     ],
+    transformIgnorePatterns: [
+        'node_modules/(?!variables/.*)'
+    ],
     moduleDirectories: [
         'node_modules',
     ],
     testMatch: [
-        // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],
     rootDir: '../../',
+    transform: {
+        '^.+\\.(ts|tsx)$': 'ts-jest',
+    },
+
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
 
@@ -171,7 +177,9 @@ export default {
     // timers: "real",
 
     // A map from regular expressions to paths to transformers
-    // transform: undefined,
+    // transform: {
+    //     '^.+\.tsx?$': 'ts-jest',
+    // },
 
     // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
     // transformIgnorePatterns: [

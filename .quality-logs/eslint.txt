@@ -1,6 +1,16 @@
 
-/home/runner/work/production-project/production-project/src/app/router/ui/AppRouter.tsx
-  6:30  error  disallow literal string  i18next/no-literal-string
+/home/runner/work/production-project/production-project/src/pages/NotFoundPage/ui/NotFoundPage.tsx
+  29:56  error  disallow literal string                                          i18next/no-literal-string
+  33:49  error  disallow literal string                                          i18next/no-literal-string
+  34:55  error  disallow literal string                                          i18next/no-literal-string
+  35:43  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  35:65  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  42:49  error  disallow literal string                                          i18next/no-literal-string
+  43:55  error  disallow literal string                                          i18next/no-literal-string
+  51:49  error  disallow literal string                                          i18next/no-literal-string
+  52:53  error  disallow literal string                                          i18next/no-literal-string
+  55:65  error  disallow literal string                                          i18next/no-literal-string
+  60:80  error  disallow literal string                                          i18next/no-literal-string
 
 /home/runner/work/production-project/production-project/src/widgets/Navbar/ui/Navbar.tsx
   20:60  error  disallow literal string  i18next/no-literal-string
@@ -8,4 +18,4 @@
 /home/runner/work/production-project/production-project/src/widgets/Sidebar/ui/Sidebar/Sidebar.tsx
   20:40  error  disallow literal string  i18next/no-literal-string
 
-✖ 3 problems (3 errors, 0 warnings)
+✖ 13 problems (13 errors, 0 warnings)

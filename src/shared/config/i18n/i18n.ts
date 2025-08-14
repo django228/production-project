@@ -13,7 +13,7 @@ i18n.use(Backend)
             escapeValue: false,
         },
         backend: {
-            loadPath: '/locales/{{lng}}/{{ns}}.json',
+            loadPath: 'locales/{{lng}}/{{ns}}.json',
         },
     });
 

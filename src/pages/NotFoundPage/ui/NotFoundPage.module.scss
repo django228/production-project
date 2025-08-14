@@ -1,0 +1,187 @@
+.NotFoundPage {
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--primary-color);
+  font-family: var(--font-family-main), serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.terminal {
+  background: var(--bg-color);
+  border: 1px solid rgb(4 150 4 / 30%);
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 0 10px rgb(4 150 4 / 10%);
+  position: relative;
+}
+
+.terminalHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(4 150 4 / 30%);
+  font-size: 14px;
+}
+
+.terminalTitle {
+  color: var(--primary-color);
+  opacity: 0.7;
+}
+
+.terminalContent {
+  font-family: var(--font-family-main), serif;
+  line-height: 1.4;
+}
+
+.prompt {
+  color: var(--primary-color);
+  margin: 5px 0;
+  opacity: 0.8;
+
+  &::before {
+    content: "user@system:~$ ";
+    color: var(--secondary-color);
+    opacity: 0.9;
+  }
+}
+
+.errorCode {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin: 15px 0;
+  font-family: var(--font-family-main), serif;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.asciiArt {
+  font-family: var(--font-family-main), serif;
+  font-size: 12px;
+  line-height: 1;
+  color: var(--primary-color);
+  white-space: pre;
+  margin: 15px 0;
+  text-align: center;
+  opacity: 0.6;
+}
+
+.errorMessage {
+  color: var(--primary-color);
+  margin: 5px 0;
+  opacity: 0.9;
+}
+
+.suggestion {
+  color: var(--primary-color);
+  margin: 5px 0;
+  opacity: 0.7;
+}
+
+.commands {
+  margin-top: 15px;
+}
+
+.command {
+  display: block;
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 8px 0;
+  margin: 4px 0;
+  border: none;
+  background: none;
+  font-family: var(--font-family-main), serif;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  opacity: 0.8;
+
+  &:hover {
+    color: var(--secondary-color);
+    opacity: 1;
+    padding-left: 15px;
+  }
+
+  &::before {
+    content: "→ ";
+    color: var(--secondary-color);
+    margin-right: 8px;
+    opacity: 0.7;
+  }
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 20px;
+  background: var(--primary-color);
+  animation: blink 1.2s infinite;
+  margin-left: 8px;
+  opacity: 0.8;
+}
+
+.scanlines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(transparent 98%, rgb(4 150 4 / 2%) 100%);
+  background-size: 100% 3px;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .terminal {
+    padding: 20px;
+  }
+
+  .errorCode {
+    font-size: 3.5rem;
+  }
+
+  .asciiArt {
+    font-size: 12px;
+  }
+
+  .terminalContent {
+    justify-content: flex-start;
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .terminal {
+    padding: 15px;
+  }
+
+  .errorCode {
+    font-size: 2.5rem;
+  }
+
+  .asciiArt {
+    font-size: 10px;
+  }
+}
