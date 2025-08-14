@@ -5,6 +5,7 @@ Checking formatting...
 [warn] src/app/styles/themes/dark-theme.scss
 [warn] src/app/styles/themes/light-theme.scss
 [warn] src/app/styles/variables/global.scss
+[warn] src/helpers/classNames/classNames.test.ts
 [warn] src/index.tsx
 [warn] src/pages/AboutPage/ui/AboutPage.async.tsx
 [warn] src/pages/MainPage/ui/MainPage.async.tsx
@@ -15,4 +16,4 @@ Checking formatting...
 [warn] src/widgets/LangSwitcher/ui/LangSwitcher.module.scss
 [warn] src/widgets/Navbar/ui/Navbar.module.scss
 [warn] src/widgets/Sidebar/ui/Sidebar/Sidebar.module.scss
-[warn] Code style issues found in 16 files. Forgot to run Prettier?
+[warn] Code style issues found in 17 files. Forgot to run Prettier?

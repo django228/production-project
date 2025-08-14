@@ -39,9 +39,9 @@ jobs:
               id: checks
               run: |
                   set +e
-                  prettier_out=$(npx prettier --check "src/**/*.{ts,tsx,scss,css,json}" 2>&1); pr_exit=$?
-                  eslint_out=$(npx eslint "src/**/*.{ts,tsx}" --max-warnings 0 2>&1); es_exit=$?
-                  stylelint_out=$(npx stylelint "src/**/*.scss" 2>&1); st_exit=$?
+                  prettier_out=$(npx prettier --check "src/**/*.{ts,tsx,scss,css,json}" --config config/prettier/.prettierrc 2>&1); pr_exit=$?
+                  eslint_out=$(npx eslint "src/**/*.{ts,tsx}" --config config/eslint/.eslintrc.js --max-warnings 0 2>&1); es_exit=$?
+                  stylelint_out=$(npx stylelint "src/**/*.scss" --config config/stylelint/.stylelintrc.js 2>&1); st_exit=$?
                   tsc_out=$(npx tsc --noEmit --skipLibCheck 2>&1); ts_exit=$?
 
                   echo "prettier_exit=$pr_exit" >> $GITHUB_OUTPUT
@@ -66,9 +66,9 @@ jobs:
               if: steps.checks.outputs.needs_fix == 'true'
               run: |
                   echo "Running auto-fixes..."
-                  npx prettier --write "src/**/*.{ts,tsx,scss,css,json}" || true
-                  npx eslint "src/**/*.{ts,tsx}" --fix --max-warnings 0 || true
-                  npx stylelint "src/**/*.scss" --fix || true
+                  npx prettier --write "src/**/*.{ts,tsx,scss,css,json}" --config config/prettier/.prettierrc || true
+                  npx eslint "src/**/*.{ts,tsx}" --config config/eslint/.eslintrc.js --fix --max-warnings 0 || true
+                  npx stylelint "src/**/*.scss" --config config/stylelint/.stylelintrc.js --fix || true
                   echo "Auto-fixes completed"
               continue-on-error: true
 
@@ -109,9 +109,9 @@ jobs:
               if: steps.checks.outputs.needs_fix == 'true' || steps.checks.outputs.tsc_exit != '0'
               run: |
                   set +e
-                  npx prettier --check "src/**/*.{ts,tsx,scss,css,json}"; pr_exit=$?
-                  npx eslint "src/**/*.{ts,tsx}" --max-warnings 0; es_exit=$?
-                  npx stylelint "src/**/*.scss"; st_exit=$?
+                  npx prettier --check "src/**/*.{ts,tsx,scss,css,json}" --config config/prettier/.prettierrc; pr_exit=$?
+                  npx eslint "src/**/*.{ts,tsx}" --config config/eslint/.eslintrc.js --max-warnings 0; es_exit=$?
+                  npx stylelint "src/**/*.scss" --config config/stylelint/.stylelintrc.js; st_exit=$?
                   npx tsc --noEmit --skipLibCheck; ts_exit=$?
 
                   echo "prettier_exit=$pr_exit" >> $GITHUB_OUTPUT

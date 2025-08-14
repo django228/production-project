@@ -1,1 +1,11 @@
 
+/home/runner/work/production-project/production-project/src/app/router/ui/AppRouter.tsx
+  6:30  error  disallow literal string  i18next/no-literal-string
+
+/home/runner/work/production-project/production-project/src/widgets/Navbar/ui/Navbar.tsx
+  20:60  error  disallow literal string  i18next/no-literal-string
+
+/home/runner/work/production-project/production-project/src/widgets/Sidebar/ui/Sidebar/Sidebar.tsx
+  20:40  error  disallow literal string  i18next/no-literal-string
+
+✖ 3 problems (3 errors, 0 warnings)

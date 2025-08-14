@@ -1,18 +1,18 @@
-import webpack from "webpack";
-import {BuildOptions} from "./types/config";
-import {buildPlugins} from "./buildPlugins";
-import {buildLoaders} from "./buildLoaders";
-import {buildResolvers} from "./buildResolvers";
-import {buildDevServer} from "./buildDevServer";
+import webpack from 'webpack';
+import { BuildOptions } from './types/config';
+import { buildPlugins } from './buildPlugins';
+import { buildLoaders } from './buildLoaders';
+import { buildResolvers } from './buildResolvers';
+import { buildDevServer } from './buildDevServer';
 
 export function buildWebpackConfig(options: BuildOptions): webpack.Configuration {
-    const {paths, mode} = options;
+    const { paths, mode } = options;
 
     return {
-        mode: mode,
+        mode,
         entry: paths.entry,
         output: {
-            filename: "bundle.js",
+            filename: 'bundle.js',
             path: paths.build,
             clean: true,
         },
@@ -20,10 +20,10 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
         module: {
             // Здесь конфигурируем лоадеры.
             // Обрабатываем все типы файлов, выходящие за границы JS
-            rules: buildLoaders(options)
+            rules: buildLoaders(options),
         },
         resolve: buildResolvers(options),
         devtool: options.isDev ? 'inline-source-map' : undefined,
-        devServer: options.isDev ? buildDevServer(options) : undefined
-    }
+        devServer: options.isDev ? buildDevServer(options) : undefined,
+    };
 }

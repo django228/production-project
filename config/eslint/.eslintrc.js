@@ -7,6 +7,8 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'airbnb',
+    'plugin:react/recommended',
+     'plugin:i18next/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -19,6 +21,7 @@ module.exports = {
   plugins: [
     'react',
     '@typescript-eslint',
+    'i18next',
   ],
   rules: {
     'react/jsx-indent': [2, 4],
@@ -45,6 +48,7 @@ module.exports = {
     'jsx-a11y/click-events-have-key-events': 'off',
     'no-param-reassign': 'off',
     'no-undef': 'off',
+    'i18next/no-literal-string': ['error', { markupOnly: true }],
   },
   globals: {
     __IS_DEV__: true,
