@@ -1,2 +1,19 @@
 Checking formatting...
-All matched files use Prettier code style!
+[warn] src/app/providers/ui/ThemeProvider.tsx
+[warn] src/app/styles/index.scss
+[warn] src/app/styles/reset.scss
+[warn] src/app/styles/themes/dark-theme.scss
+[warn] src/app/styles/themes/light-theme.scss
+[warn] src/app/styles/variables/global.scss
+[warn] src/helpers/classNames/classNames.test.ts
+[warn] src/index.tsx
+[warn] src/pages/AboutPage/ui/AboutPage.async.tsx
+[warn] src/pages/MainPage/ui/MainPage.async.tsx
+[warn] src/shared/ui/AppLink/AppLink.module.scss
+[warn] src/shared/ui/AppLink/AppLink.tsx
+[warn] src/shared/ui/Button/Button.module.scss
+[warn] src/shared/ui/Button/Button.tsx
+[warn] src/widgets/LangSwitcher/ui/LangSwitcher.module.scss
+[warn] src/widgets/Navbar/ui/Navbar.module.scss
+[warn] src/widgets/Sidebar/ui/Sidebar/Sidebar.module.scss
+[warn] Code style issues found in 17 files. Forgot to run Prettier?
