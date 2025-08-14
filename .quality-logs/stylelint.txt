@@ -1,5 +1,80 @@
 
+src/widgets/PageLoader/ui/PageLoader.module.scss
+ [2m17:12[22m   [31m[31m✖[39m  Expected double quotes                                  [2mstring-quotes[22m
+ [2m27:12[22m   [31m[31m✖[39m  Expected double quotes                                  [2mstring-quotes[22m
+ [2m35:24[22m   [31m[31m✖[39m  Expected modern color-function notation                 [2mcolor-function-notation[22m
+ [2m35:38[22m   [31m[31m✖[39m  Expected "0.15" to be "15%"                             [2malpha-value-notation[22m
+ [2m41:24[22m   [31m[31m✖[39m  Expected modern color-function notation                 [2mcolor-function-notation[22m
+ [2m41:44[22m   [31m[31m✖[39m  Expected "0" to be "0%"                                 [2malpha-value-notation[22m
+ [2m41:58[22m   [31m[31m✖[39m  Expected modern color-function notation                 [2mcolor-function-notation[22m
+ [2m41:78[22m   [31m[31m✖[39m  Expected "0" to be "0%"                                 [2malpha-value-notation[22m
+ [2m41:92[22m   [31m[31m✖[39m  Expected modern color-function notation                 [2mcolor-function-notation[22m
+ [2m41:112[22m  [31m[31m✖[39m  Expected "0" to be "0%"                                 [2malpha-value-notation[22m
+ [2m41:117[22m  [31m[31m✖[39m  Unexpected unit                                         [2mlength-zero-no-unit[22m
+ [2m41:125[22m  [31m[31m✖[39m  Expected modern color-function notation                 [2mcolor-function-notation[22m
+ [2m41:145[22m  [31m[31m✖[39m  Expected "0" to be "0%"                                 [2malpha-value-notation[22m
+ [2m41:147[22m  [31m[31m✖[39m  Expected line length to be no more than 120 characters  [2mmax-line-length[22m
+ [2m44:24[22m   [31m[31m✖[39m  Unexpected named color "white"                          [2mcolor-named[22m
+ [2m44:41[22m   [31m[31m✖[39m  Expected modern color-function notation                 [2mcolor-function-notation[22m
+ [2m44:61[22m   [31m[31m✖[39m  Expected "0" to be "0%"                                 [2malpha-value-notation[22m
+ [2m44:75[22m   [31m[31m✖[39m  Expected modern color-function notation                 [2mcolor-function-notation[22m
+ [2m44:95[22m   [31m[31m✖[39m  Expected "0" to be "0%"                                 [2malpha-value-notation[22m
+ [2m44:100[22m  [31m[31m✖[39m  Unexpected unit                                         [2mlength-zero-no-unit[22m
+ [2m44:108[22m  [31m[31m✖[39m  Expected modern color-function notation                 [2mcolor-function-notation[22m
+ [2m44:128[22m  [31m[31m✖[39m  Expected "0" to be "0%"                                 [2malpha-value-notation[22m
+ [2m44:130[22m  [31m[31m✖[39m  Expected line length to be no more than 120 characters  [2mmax-line-length[22m
+ [2m47:24[22m   [31m[31m✖[39m  Unexpected named color "white"                          [2mcolor-named[22m
+ [2m47:41[22m   [31m[31m✖[39m  Unexpected named color "white"                          [2mcolor-named[22m
+ [2m47:58[22m   [31m[31m✖[39m  Expected modern color-function notation                 [2mcolor-function-notation[22m
+ [2m47:78[22m   [31m[31m✖[39m  Expected "0" to be "0%"                                 [2malpha-value-notation[22m
+ [2m47:83[22m   [31m[31m✖[39m  Unexpected unit                                         [2mlength-zero-no-unit[22m
+ [2m47:91[22m   [31m[31m✖[39m  Expected modern color-function notation                 [2mcolor-function-notation[22m
+ [2m47:111[22m  [31m[31m✖[39m  Expected "0" to be "0%"                                 [2malpha-value-notation[22m
+ [2m50:24[22m   [31m[31m✖[39m  Unexpected named color "white"                          [2mcolor-named[22m
+ [2m50:41[22m   [31m[31m✖[39m  Unexpected named color "white"                          [2mcolor-named[22m
+ [2m50:58[22m   [31m[31m✖[39m  Unexpected named color "white"                          [2mcolor-named[22m
+ [2m50:66[22m   [31m[31m✖[39m  Unexpected unit                                         [2mlength-zero-no-unit[22m
+ [2m50:74[22m   [31m[31m✖[39m  Expected modern color-function notation                 [2mcolor-function-notation[22m
+ [2m50:94[22m   [31m[31m✖[39m  Expected "0" to be "0%"                                 [2malpha-value-notation[22m
+ [2m53:24[22m   [31m[31m✖[39m  Unexpected named color "white"                          [2mcolor-named[22m
+ [2m53:41[22m   [31m[31m✖[39m  Unexpected named color "white"                          [2mcolor-named[22m
+ [2m53:58[22m   [31m[31m✖[39m  Unexpected named color "white"                          [2mcolor-named[22m
+ [2m53:66[22m   [31m[31m✖[39m  Unexpected unit                                         [2mlength-zero-no-unit[22m
+ [2m53:74[22m   [31m[31m✖[39m  Unexpected named color "white"                          [2mcolor-named[22m
+ [2m56:24[22m   [31m[31m✖[39m  Expected modern color-function notation                 [2mcolor-function-notation[22m
+ [2m56:44[22m   [31m[31m✖[39m  Expected "0" to be "0%"                                 [2malpha-value-notation[22m
+ [2m56:58[22m   [31m[31m✖[39m  Unexpected named color "white"                          [2mcolor-named[22m
+ [2m56:75[22m   [31m[31m✖[39m  Unexpected named color "white"                          [2mcolor-named[22m
+ [2m56:83[22m   [31m[31m✖[39m  Unexpected unit                                         [2mlength-zero-no-unit[22m
+ [2m56:91[22m   [31m[31m✖[39m  Unexpected named color "white"                          [2mcolor-named[22m
+ [2m59:24[22m   [31m[31m✖[39m  Expected modern color-function notation                 [2mcolor-function-notation[22m
+ [2m59:44[22m   [31m[31m✖[39m  Expected "0" to be "0%"                                 [2malpha-value-notation[22m
+ [2m59:58[22m   [31m[31m✖[39m  Expected modern color-function notation                 [2mcolor-function-notation[22m
+ [2m59:78[22m   [31m[31m✖[39m  Expected "0" to be "0%"                                 [2malpha-value-notation[22m
+ [2m59:92[22m   [31m[31m✖[39m  Unexpected named color "white"                          [2mcolor-named[22m
+ [2m59:100[22m  [31m[31m✖[39m  Unexpected unit                                         [2mlength-zero-no-unit[22m
+ [2m59:108[22m  [31m[31m✖[39m  Unexpected named color "white"                          [2mcolor-named[22m
+ [2m62:24[22m   [31m[31m✖[39m  Expected modern color-function notation                 [2mcolor-function-notation[22m
+ [2m62:44[22m   [31m[31m✖[39m  Expected "0" to be "0%"                                 [2malpha-value-notation[22m
+ [2m62:58[22m   [31m[31m✖[39m  Expected modern color-function notation                 [2mcolor-function-notation[22m
+ [2m62:78[22m   [31m[31m✖[39m  Expected "0" to be "0%"                                 [2malpha-value-notation[22m
+ [2m62:92[22m   [31m[31m✖[39m  Expected modern color-function notation                 [2mcolor-function-notation[22m
+ [2m62:112[22m  [31m[31m✖[39m  Expected "0" to be "0%"                                 [2malpha-value-notation[22m
+ [2m62:117[22m  [31m[31m✖[39m  Unexpected unit                                         [2mlength-zero-no-unit[22m
+ [2m62:125[22m  [31m[31m✖[39m  Unexpected named color "white"                          [2mcolor-named[22m
+ [2m62:130[22m  [31m[31m✖[39m  Expected line length to be no more than 120 characters  [2mmax-line-length[22m
+ [2m65:24[22m   [31m[31m✖[39m  Expected modern color-function notation                 [2mcolor-function-notation[22m
+ [2m65:44[22m   [31m[31m✖[39m  Expected "0" to be "0%"                                 [2malpha-value-notation[22m
+ [2m65:58[22m   [31m[31m✖[39m  Expected modern color-function notation                 [2mcolor-function-notation[22m
+ [2m65:78[22m   [31m[31m✖[39m  Expected "0" to be "0%"                                 [2malpha-value-notation[22m
+ [2m65:92[22m   [31m[31m✖[39m  Expected modern color-function notation                 [2mcolor-function-notation[22m
+ [2m65:112[22m  [31m[31m✖[39m  Expected "0" to be "0%"                                 [2malpha-value-notation[22m
+ [2m65:117[22m  [31m[31m✖[39m  Unexpected unit                                         [2mlength-zero-no-unit[22m
+ [2m65:125[22m  [31m[31m✖[39m  Expected modern color-function notation                 [2mcolor-function-notation[22m
+ [2m65:145[22m  [31m[31m✖[39m  Expected "0" to be "0%"                                 [2malpha-value-notation[22m
+ [2m65:147[22m  [31m[31m✖[39m  Expected line length to be no more than 120 characters  [2mmax-line-length[22m
+
 src/widgets/ThemeSwitcher/ui/ThemeSwitcher.module.scss
  [2m1:1[22m  [31m[31m✖[39m  Unexpected empty source  [2mno-empty-source[22m
 
-1 problem ([31m1 error[39m, [33m0 warnings[39m)
+74 problems ([31m74 errors[39m, [33m0 warnings[39m)
