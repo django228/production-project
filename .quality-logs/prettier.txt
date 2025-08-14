@@ -16,3 +16,4 @@ Checking formatting...
 [warn] src/widgets/LangSwitcher/ui/LangSwitcher.module.scss
 [warn] src/widgets/Navbar/ui/Navbar.module.scss
 [warn] src/widgets/Sidebar/ui/Sidebar/Sidebar.module.scss
+[warn] Code style issues found in 17 files. Forgot to run Prettier?

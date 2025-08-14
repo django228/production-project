@@ -2,76 +2,10 @@
 /home/runner/work/production-project/production-project/src/app/router/ui/AppRouter.tsx
   6:30  error  disallow literal string  i18next/no-literal-string
 
-/home/runner/work/production-project/production-project/src/helpers/classNames/classNames.test.ts
-   1:28  error  Strings must use singlequote                   quotes
-   3:10  error  Strings must use singlequote                   quotes
-   4:1   error  Expected indentation of 4 spaces but found 2   indent
-   4:8   error  Strings must use singlequote                   quotes
-   5:1   error  Expected indentation of 8 spaces but found 4   indent
-   5:23  error  Strings must use singlequote                   quotes
-   5:42  error  Strings must use singlequote                   quotes
-   6:1   error  Expected indentation of 4 spaces but found 2   indent
-   8:1   error  Expected indentation of 4 spaces but found 2   indent
-   8:8   error  Strings must use singlequote                   quotes
-   9:1   error  Expected indentation of 8 spaces but found 4   indent
-   9:22  error  Strings must use singlequote                   quotes
-  10:1   error  Expected indentation of 8 spaces but found 4   indent
-  10:23  error  Strings must use singlequote                   quotes
-  10:41  error  Strings must use singlequote                   quotes
-  10:51  error  Strings must use singlequote                   quotes
-  11:1   error  Expected indentation of 4 spaces but found 2   indent
-  13:1   error  Expected indentation of 4 spaces but found 2   indent
-  13:8   error  Strings must use singlequote                   quotes
-  14:1   error  Expected indentation of 8 spaces but found 4   indent
-  14:22  error  Strings must use singlequote                   quotes
-  15:1   error  Expected indentation of 8 spaces but found 4   indent
-  16:1   error  Expected indentation of 12 spaces but found 6  indent
-  16:18  error  Strings must use singlequote                   quotes
-  17:1   error  Expected indentation of 16 spaces but found 8  indent
-  17:9   error  Strings must use singlequote                   quotes
-  18:1   error  Expected indentation of 16 spaces but found 8  indent
-  18:9   error  Strings must use singlequote                   quotes
-  19:1   error  Expected indentation of 12 spaces but found 6  indent
-  19:9   error  Missing trailing comma                         comma-dangle
-  20:1   error  Expected indentation of 8 spaces but found 4   indent
-  21:1   error  Expected indentation of 4 spaces but found 2   indent
-  23:1   error  Expected indentation of 4 spaces but found 2   indent
-  23:8   error  Strings must use singlequote                   quotes
-  24:1   error  Expected indentation of 8 spaces but found 4   indent
-  24:22  error  Strings must use singlequote                   quotes
-  25:1   error  Expected indentation of 8 spaces but found 4   indent
-  26:1   error  Expected indentation of 12 spaces but found 6  indent
-  26:18  error  Strings must use singlequote                   quotes
-  27:1   error  Expected indentation of 16 spaces but found 8  indent
-  27:9   error  Strings must use singlequote                   quotes
-  28:1   error  Expected indentation of 16 spaces but found 8  indent
-  28:9   error  Strings must use singlequote                   quotes
-  29:1   error  Expected indentation of 12 spaces but found 6  indent
-  29:9   error  Missing trailing comma                         comma-dangle
-  30:1   error  Expected indentation of 8 spaces but found 4   indent
-  31:1   error  Expected indentation of 4 spaces but found 2   indent
-  33:1   error  Expected indentation of 4 spaces but found 2   indent
-  33:8   error  Strings must use singlequote                   quotes
-  34:1   error  Expected indentation of 8 spaces but found 4   indent
-  34:22  error  Strings must use singlequote                   quotes
-  35:1   error  Expected indentation of 8 spaces but found 4   indent
-  36:1   error  Expected indentation of 12 spaces but found 6  indent
-  36:18  error  Strings must use singlequote                   quotes
-  37:1   error  Expected indentation of 16 spaces but found 8  indent
-  37:9   error  Strings must use singlequote                   quotes
-  38:1   error  Expected indentation of 16 spaces but found 8  indent
-  38:9   error  Strings must use singlequote                   quotes
-  39:1   error  Expected indentation of 12 spaces but found 6  indent
-  39:9   error  Missing trailing comma                         comma-dangle
-  40:1   error  Expected indentation of 8 spaces but found 4   indent
-  41:1   error  Expected indentation of 4 spaces but found 2   indent
-  42:4   error  Newline required at end of file but not found  eol-last
-
 /home/runner/work/production-project/production-project/src/widgets/Navbar/ui/Navbar.tsx
   20:60  error  disallow literal string  i18next/no-literal-string
 
 /home/runner/work/production-project/production-project/src/widgets/Sidebar/ui/Sidebar/Sidebar.tsx
   20:40  error  disallow literal string  i18next/no-literal-string
 
-✖ 66 problems (66 errors, 0 warnings)
-  63 errors and 0 warnings potentially fixable with the `--fix` option.
+✖ 3 problems (3 errors, 0 warnings)
