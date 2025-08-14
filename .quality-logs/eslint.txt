@@ -1,25 +1,53 @@
 
-/home/runner/work/production-project/production-project/src/app/router/ui/AppRouter.tsx
-  4:8   error  A space is required after '{'   object-curly-spacing
-  4:19  error  A space is required before '}'  object-curly-spacing
-  4:26  error  Strings must use singlequote    quotes
+/home/runner/work/production-project/production-project/src/pages/NotFoundPage/index.ts
+  1:77  error  Newline required at end of file but not found  eol-last
+
+/home/runner/work/production-project/production-project/src/pages/NotFoundPage/ui/NotFoundPage.async.tsx
+  1:22  error  Strings must use singlequote                   quotes
+  4:1   error  Expected indentation of 4 spaces but found 2   indent
+  5:1   error  Expected indentation of 8 spaces but found 4   indent
+  5:5   error  Expected no linebreak before this expression   implicit-arrow-linebreak
+  6:1   error  Expected indentation of 12 spaces but found 6  indent
+  7:1   error  Expected indentation of 12 spaces but found 6  indent
+  7:39  error  Strings must use singlequote                   quotes
+  8:1   error  Expected indentation of 8 spaces but found 4   indent
+  8:7   error  Missing trailing comma                         comma-dangle
+
+/home/runner/work/production-project/production-project/src/pages/NotFoundPage/ui/NotFoundPage.tsx
+  26:13  error  Empty components are self-closing                                react/self-closing-comp
+  29:56  error  disallow literal string                                          i18next/no-literal-string
+  31:1   error  Trailing spaces not allowed                                      no-trailing-spaces
+  33:49  error  disallow literal string                                          i18next/no-literal-string
+  34:1   error  This line has a length of 128. Maximum allowed is 120            max-len
+  34:55  error  disallow literal string                                          i18next/no-literal-string
+  34:73  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  34:95  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  35:1   error  Trailing spaces not allowed                                      no-trailing-spaces
+  37:1   error  Trailing spaces not allowed                                      no-trailing-spaces
+  39:1   error  Trailing spaces not allowed                                      no-trailing-spaces
+  40:49  error  disallow literal string                                          i18next/no-literal-string
+  41:55  error  `ERROR: ` must be placed on a new line                           react/jsx-one-expression-per-line
+  41:55  error  disallow literal string                                          i18next/no-literal-string
+  41:62  error  `{t('Страница не найдена')}` must be placed on a new line        react/jsx-one-expression-per-line
+  42:1   error  This line has a length of 134. Maximum allowed is 120            max-len
+  43:1   error  Trailing spaces not allowed                                      no-trailing-spaces
+  44:49  error  disallow literal string                                          i18next/no-literal-string
+  45:53  error  disallow literal string                                          i18next/no-literal-string
+  46:1   error  Trailing spaces not allowed                                      no-trailing-spaces
+  48:65  error  disallow literal string                                          i18next/no-literal-string
+  49:40  error  `{t('На главную')}` must be placed on a new line                 react/jsx-one-expression-per-line
+  51:32  error  Trailing spaces not allowed                                      no-trailing-spaces
+  54:26  error  disallow literal string                                          i18next/no-literal-string
+  55:37  error  `{t('Назад')}` must be placed on a new line                      react/jsx-one-expression-per-line
+  58:1   error  Trailing spaces not allowed                                      no-trailing-spaces
+  60:25  error  Empty components are self-closing                                react/self-closing-comp
+  68:29  error  Newline required at end of file but not found                    eol-last
 
 /home/runner/work/production-project/production-project/src/widgets/Navbar/ui/Navbar.tsx
   20:60  error  disallow literal string  i18next/no-literal-string
 
-/home/runner/work/production-project/production-project/src/widgets/PageLoader/ui/PageLoader.tsx
-   1:8   error  A space is required after '{'                                                                          object-curly-spacing
-   1:19  error  A space is required before '}'                                                                         object-curly-spacing
-   1:26  error  Strings must use singlequote                                                                           quotes
-   2:43  error  Missing semicolon                                                                                      semi
-   8:28  error  A space is required after '{'                                                                          object-curly-spacing
-   8:38  error  A space is required before '}'                                                                         object-curly-spacing
-   8:60  error  Unexpected block statement surrounding arrow body; move the returned value immediately after the `=>`  arrow-body-style
-  11:13  error  Empty components are self-closing                                                                      react/self-closing-comp
-  14:3   error  Newline required at end of file but not found                                                          eol-last
-
 /home/runner/work/production-project/production-project/src/widgets/Sidebar/ui/Sidebar/Sidebar.tsx
   20:40  error  disallow literal string  i18next/no-literal-string
 
-✖ 14 problems (14 errors, 0 warnings)
-  12 errors and 0 warnings potentially fixable with the `--fix` option.
+✖ 40 problems (40 errors, 0 warnings)
+  25 errors and 0 warnings potentially fixable with the `--fix` option.

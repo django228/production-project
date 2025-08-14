@@ -23,41 +23,49 @@ const NotFoundPage = ({ className }: NotFoundPageProps) => {
 
     return (
         <div className={classNames(cls.NotFoundPage, {}, [className])}>
-            <div className={cls.scanlines}></div>
+            <div className={cls.scanlines} />
             <div className={cls.terminal}>
                 <div className={cls.terminalHeader}>
                     <div className={cls.terminalTitle}>system@localhost:~</div>
                 </div>
-                
+
                 <div className={cls.terminalContent}>
                     <div className={cls.prompt}>ls /pages/requested-page</div>
-                    <div className={cls.errorMessage}>ls: cannot access '/pages/requested-page': No such file or directory</div>
-                    
+                    <div className={cls.errorMessage}>
+                        ls: cannot access '/pages/requested-page': No such file or directory
+                    </div>
+
                     <div className={cls.errorCode}>404</div>
-                    
+
                     <div className={cls.asciiArt}>{asciiArt}</div>
-                    
+
                     <div className={cls.prompt}>cat error.log</div>
-                    <div className={cls.errorMessage}>ERROR: {t('Страница не найдена')}</div>
-                    <div className={cls.suggestion}>{t('К сожалению, запрашиваемая страница не существует или была перемещена')}</div>
-                    
+                    <div className={cls.errorMessage}>
+                        ERROR:
+                        {t('Страница не найдена')}
+                    </div>
+                    <div className={cls.suggestion}>
+                        {t('К сожалению, запрашиваемая страница не существует или была перемещена')}
+                    </div>
+
                     <div className={cls.prompt}>help --navigation</div>
                     <div className={cls.suggestion}>Available commands:</div>
-                    
+
                     <div className={cls.commands}>
                         <AppLink to="/" className={cls.command}>
-                            cd /home - {t('На главную')}
+                            cd /home -
+                            {' '}
+                            {t('На главную')}
                         </AppLink>
-                        <button 
-                            onClick={handleGoBack}
-                            className={cls.command}
-                        >
-                            cd .. - {t('Назад')}
+                        <button onClick={handleGoBack} className={cls.command}>
+                            cd .. -
+                            {' '}
+                            {t('Назад')}
                         </button>
                     </div>
-                    
+
                     <div className={cls.prompt}>
-                        <span className={cls.cursor}></span>
+                        <span className={cls.cursor} />
                     </div>
                 </div>
             </div>
