@@ -18,8 +18,7 @@
   padding: 30px;
   max-width: 900px;
   width: 100%;
-  box-shadow: 0 0 20px rgba(0, 255, 65, 0.3),
-    inset 0 0 20px rgba(0, 255, 65, 0.1);
+  box-shadow: 0 0 20px rgb(0 255 65 / 30%), inset 0 0 20px rgb(0 255 65 / 10%);
   position: relative;
 }
 
@@ -34,12 +33,12 @@
 
 .systemInfo {
   font-size: 12px;
-  color: #00cc33;
+  color: #0c3;
 }
 
 .timestamp {
   font-size: 12px;
-  color: #ffff00;
+  color: #ff0;
 }
 
 .hackingSequence {
@@ -54,13 +53,13 @@
     color: #00ff41;
   }
   &.warning {
-    color: #ffff00;
+    color: #ff0;
   }
   &.error {
-    color: #ff4444;
+    color: #f44;
   }
   &.info {
-    color: #00ccff;
+    color: #0cf;
   }
 }
 
@@ -76,7 +75,7 @@
 
 .progressFill {
   height: 100%;
-  background: linear-gradient(90deg, #00ff41, #00cc33);
+  background: linear-gradient(90deg, #00ff41, #0c3);
   width: 100%;
   animation: progressLoad 3s ease-in-out;
 }
@@ -88,8 +87,8 @@
 
 .errorCode {
   font-size: 5rem;
-  color: #ff4444;
-  text-shadow: 0 0 10px #ff4444, 0 0 20px #ff4444, 0 0 30px #ff4444;
+  color: #f44;
+  text-shadow: 0 0 10px #f44, 0 0 20px #f44, 0 0 30px #f44;
   margin: 20px 0;
   animation: errorPulse 2s infinite;
 }
@@ -103,7 +102,7 @@
 }
 
 .errorDescription {
-  color: #00cc33;
+  color: #0c3;
   font-size: 1rem;
   margin: 20px 0;
   line-height: 1.6;
@@ -127,7 +126,7 @@
 
 .commandButton {
   background: transparent;
-  color: #00ccff;
+  color: #0cf;
   border: none;
   font-family: "Courier New", monospace;
   font-size: 14px;
@@ -144,12 +143,12 @@
   margin-top: 20px;
   padding: 20px;
   border: 1px solid #333;
-  background: rgba(0, 255, 65, 0.05);
+  background: rgb(0 255 65 / 5%);
 }
 
 .navCommand {
   display: block;
-  color: #00ccff;
+  color: #0cf;
   text-decoration: none;
   padding: 8px 0;
   font-family: "Courier New", monospace;
@@ -224,13 +223,13 @@
 
   &::before {
     animation: glitch1 0.5s infinite;
-    color: #ff00ff;
+    color: #f0f;
     z-index: -1;
   }
 
   &::after {
     animation: glitch2 0.5s infinite;
-    color: #00ffff;
+    color: #0ff;
     z-index: -2;
   }
 }
