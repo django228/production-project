@@ -1,53 +1,23 @@
 
-/home/runner/work/production-project/production-project/src/app/providers/ErrorBoundary/index.ts
-  1:47  error  Missing semicolon                              semi
-  3:26  error  Newline required at end of file but not found  eol-last
-
 /home/runner/work/production-project/production-project/src/app/providers/ErrorBoundary/ui/ErrorBoundary.tsx
-   1:15  error    A space is required after '{'                  object-curly-spacing
-   1:46  error    A space is required before '}'                 object-curly-spacing
-   1:53  error    Strings must use singlequote                   quotes
-   2:8   error    A space is required after '{'                  object-curly-spacing
-   2:18  error    A space is required before '}'                 object-curly-spacing
-   2:25  error    Strings must use singlequote                   quotes
-  25:9   warning  Unexpected console statement                   no-console
-  29:13  error    Must use destructuring state assignment        react/destructuring-assignment
-  31:39  error    Unexpected usage of singlequote                jsx-quotes
-  34:16  error    Must use destructuring props assignment        react/destructuring-assignment
-  38:30  error    Newline required at end of file but not found  eol-last
+  25:9   warning  Unexpected console statement             no-console
+  29:13  error    Must use destructuring state assignment  react/destructuring-assignment
+  38:16  error    Must use destructuring props assignment  react/destructuring-assignment
 
-/home/runner/work/production-project/production-project/src/app/providers/ErrorBoundary/ui/ErrorButton.tsx
-   2:8   error  A space is required after '{'                  object-curly-spacing
-   2:28  error  A space is required before '}'                 object-curly-spacing
-   2:35  error  Strings must use singlequote                   quotes
-   4:27  error  Block must not be padded by blank lines        padded-blocks
-   7:1   error  Trailing spaces not allowed                    no-trailing-spaces
-   8:6   error  Missing semicolon                              semi
-  11:9   error  Empty components are self-closing              react/self-closing-comp
-  17:28  error  Newline required at end of file but not found  eol-last
+/home/runner/work/production-project/production-project/src/app/router/ui/AppRouter.tsx
+  3:29  error  'shared/config/routeConfig/routeConfig' imported multiple times  import/no-duplicates
+  5:27  error  'shared/config/routeConfig/routeConfig' imported multiple times  import/no-duplicates
 
 /home/runner/work/production-project/production-project/src/index.tsx
-  3:1   error  `./app/App` import should occur after import of `app/providers/ErrorBoundary`  import/order
-  7:8   error  A space is required after '{'                                                  object-curly-spacing
-  7:22  error  A space is required before '}'                                                 object-curly-spacing
-  7:29  error  Strings must use singlequote                                                   quotes
+  3:1  error  `./app/App` import should occur after import of `app/providers/ErrorBoundary`  import/order
 
 /home/runner/work/production-project/production-project/src/pages/AboutPage/ui/AboutPage.tsx
-  11:1   error  Trailing spaces not allowed  no-trailing-spaces
-  15:25  error  disallow literal string      i18next/no-literal-string
-  16:25  error  disallow literal string      i18next/no-literal-string
-  17:25  error  disallow literal string      i18next/no-literal-string
-  18:25  error  disallow literal string      i18next/no-literal-string
-  19:25  error  disallow literal string      i18next/no-literal-string
-  20:25  error  disallow literal string      i18next/no-literal-string
-  23:1   error  Trailing spaces not allowed  no-trailing-spaces
-
-/home/runner/work/production-project/production-project/src/pages/MainPage/ui/MainPage.tsx
-  14:1   error  Trailing spaces not allowed                         no-trailing-spaces
-  24:1   error  Trailing spaces not allowed                         no-trailing-spaces
-  27:20  error  `{t('Текущая тема')}` must be placed on a new line  react/jsx-one-expression-per-line
-  27:39  error  `: ` must be placed on a new line                   react/jsx-one-expression-per-line
-  27:41  error  `{theme}` must be placed on a new line              react/jsx-one-expression-per-line
+  19:25  error  disallow literal string  i18next/no-literal-string
+  20:25  error  disallow literal string  i18next/no-literal-string
+  21:25  error  disallow literal string  i18next/no-literal-string
+  22:25  error  disallow literal string  i18next/no-literal-string
+  23:25  error  disallow literal string  i18next/no-literal-string
+  24:25  error  disallow literal string  i18next/no-literal-string
 
 /home/runner/work/production-project/production-project/src/pages/NotFoundPage/ui/NotFoundPage.tsx
   29:56  error  disallow literal string                                          i18next/no-literal-string
@@ -63,29 +33,13 @@
   60:80  error  disallow literal string                                          i18next/no-literal-string
 
 /home/runner/work/production-project/production-project/src/shared/ui/Button/Button.stories.tsx
-   1:1  error  Do not import renderer package "@storybook/react" directly. Use a framework package instead (e.g. @storybook/nextjs, @storybook/react-vite, @storybook/react-webpack5, @storybook/react-native-web-vite, @storybook/experimental-nextjs-vite)  storybook/no-renderer-packages
-   3:1  error  `app/providers/ThemeProvider/lib/ThemeContext` import should occur before import of `./Button`                                                                                                                                                 import/order
-  49:3  error  Newline required at end of file but not found                                                                                                                                                                                                  eol-last
+  1:1  error  Do not import renderer package "@storybook/react" directly. Use a framework package instead (e.g. @storybook/nextjs, @storybook/react-vite, @storybook/react-webpack5, @storybook/react-native-web-vite, @storybook/experimental-nextjs-vite)  storybook/no-renderer-packages
 
 /home/runner/work/production-project/production-project/src/widgets/Navbar/ui/Navbar.tsx
   20:60  error  disallow literal string  i18next/no-literal-string
 
 /home/runner/work/production-project/production-project/src/widgets/PageError/ui/PageError.tsx
-   1:8   error  A space is required after '{'                                                   object-curly-spacing
-   1:19  error  A space is required before '}'                                                  object-curly-spacing
-   1:26  error  Strings must use singlequote                                                    quotes
-   2:42  error  Missing semicolon                                                               semi
-   3:1   error  `react-i18next` import should occur before import of `./PageError.module.scss`  import/order
-   3:8   error  A space is required after '{'                                                   object-curly-spacing
-   3:23  error  A space is required before '}'                                                  object-curly-spacing
-   3:30  error  Strings must use singlequote                                                    quotes
-   9:27  error  A space is required after '{'                                                   object-curly-spacing
-   9:37  error  A space is required before '}'                                                  object-curly-spacing
-  10:11  error  A space is required after '{'                                                   object-curly-spacing
-  10:13  error  A space is required before '}'                                                  object-curly-spacing
-  14:6   error  Missing semicolon                                                               semi
-  19:48  error  disallow literal string                                                         i18next/no-literal-string
-  35:3   error  Newline required at end of file but not found                                   eol-last
+  19:48  error  disallow literal string  i18next/no-literal-string
 
-✖ 68 problems (67 errors, 1 warning)
-  44 errors and 0 warnings potentially fixable with the `--fix` option.
+✖ 26 problems (25 errors, 1 warning)
+  1 error and 0 warnings potentially fixable with the `--fix` option.

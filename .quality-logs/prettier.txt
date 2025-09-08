@@ -1,9 +1,6 @@
 Checking formatting...
-[warn] src/app/hooks/useTheme.ts
-[warn] src/app/providers/ErrorBoundary/index.ts
-[warn] src/app/providers/ErrorBoundary/ui/ErrorBoundary.tsx
-[warn] src/app/providers/ErrorBoundary/ui/ErrorButton.tsx
 [warn] src/app/providers/ThemeProvider/ui/ThemeProvider.tsx
+[warn] src/app/router/ui/AppRouter.tsx
 [warn] src/app/styles/index.scss
 [warn] src/app/styles/reset.scss
 [warn] src/app/styles/themes/dark-theme.scss
@@ -22,13 +19,12 @@ Checking formatting...
 [warn] src/pages/NotFoundPage/ui/NotFoundPage.tsx
 [warn] src/shared/ui/AppLink/AppLink.module.scss
 [warn] src/shared/ui/AppLink/AppLink.tsx
-[warn] src/shared/ui/Button/Button.stories.tsx
+[warn] src/shared/ui/Button/Button.module.scss
 [warn] src/shared/ui/Button/Button.tsx
 [warn] src/widgets/LangSwitcher/ui/LangSwitcher.module.scss
 [warn] src/widgets/Navbar/ui/Navbar.module.scss
 [warn] src/widgets/PageError/ui/PageError.module.scss
-[warn] src/widgets/PageError/ui/PageError.tsx
 [warn] src/widgets/PageLoader/ui/PageLoader.module.scss
 [warn] src/widgets/Sidebar/ui/Sidebar/Sidebar.module.scss
 [warn] src/widgets/ThemeSwitcher/ui/ThemeSwitcher.module.scss
-[warn] Code style issues found in 32 files. Forgot to run Prettier?
+[warn] Code style issues found in 28 files. Forgot to run Prettier?
