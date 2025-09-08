@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8">
+    <title>Redirecting to Production Project</title>
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script takes the current url and converts the path and query
+      // string into just a query string, and then redirects the browser
+      // to the new url with only a query string and hash fragment,
+      // e.g. https://www.foo.tld/one/two?a=b&c=d#qwe, becomes
+      // https://www.foo.tld/?/one/two&a=b~and~c=d#qwe
+      var path = location.pathname.slice(1);
+      var query = location.search.slice(1);
+      var hash = location.hash.slice(1);
+      
+      // Remove trailing slash if present
+      if (path.endsWith('/')) {
+        path = path.slice(0, -1);
+      }
+      
+      var newPath = path ? '?' + path : '';
+      if (query) {
+        newPath += '&' + query;
+      }
+      if (hash) {
+        newPath += '#' + hash;
+      }
+      
+      // Redirect to the new path
+      location.replace('/production-project/' + newPath);
+    </script>
+  </head>
+  <body>
+    <!-- Redirecting to Production Project -->
+  </body>
+</html>

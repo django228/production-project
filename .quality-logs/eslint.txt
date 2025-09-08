@@ -4,6 +4,7 @@
   29:13  error    Must use destructuring state assignment  react/destructuring-assignment
   38:16  error    Must use destructuring props assignment  react/destructuring-assignment
 
+
 /home/runner/work/production-project/production-project/src/index.tsx
   3:1  error  `./app/App` import should occur after import of `app/providers/ErrorBoundary`  import/order
 
@@ -37,4 +38,4 @@
 /home/runner/work/production-project/production-project/src/widgets/PageError/ui/PageError.tsx
   19:48  error  disallow literal string  i18next/no-literal-string
 
-✖ 24 problems (23 errors, 1 warning)
+
