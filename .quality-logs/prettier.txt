@@ -1,6 +1,5 @@
 Checking formatting...
 [warn] src/app/providers/ThemeProvider/ui/ThemeProvider.tsx
-[warn] src/app/router/ui/AppRouter.tsx
 [warn] src/app/styles/index.scss
 [warn] src/app/styles/reset.scss
 [warn] src/app/styles/themes/dark-theme.scss
@@ -27,4 +26,4 @@ Checking formatting...
 [warn] src/widgets/PageLoader/ui/PageLoader.module.scss
 [warn] src/widgets/Sidebar/ui/Sidebar/Sidebar.module.scss
 [warn] src/widgets/ThemeSwitcher/ui/ThemeSwitcher.module.scss
-
+[warn] Code style issues found in 27 files. Forgot to run Prettier?
