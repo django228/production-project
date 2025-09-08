@@ -1,4 +1,14 @@
 {
   "Главная" : "Main",
-  "Главная страница" : "Main page"
+  "Главная страница" : "Main page",
+  "Добро пожаловать на главную страницу": "Welcome to the main page",
+  "Это демонстрационное приложение с переключением тем и языками.": "This is a demo application with theme and language switching.",
+  "Функции приложения": "Application features",
+  "Переключение между светлой и темной темой": "Switching between light and dark themes",
+  "Поддержка нескольких языков (русский/английский)": "Support for multiple languages (Russian/English)",
+  "Адаптивный дизайн": "Responsive design",
+  "Ленивая загрузка страниц": "Lazy loading of pages",
+  "Текущие настройки": "Current settings",
+  "Текущая тема": "Current theme",
+  "Переключить тему": "Toggle theme"
 }

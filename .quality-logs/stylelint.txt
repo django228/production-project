@@ -1,10 +1,33 @@
 
+src/app/styles/variables/global.scss
+ [2m20:2[22m  [31m[31m✖[39m  Unexpected whitespace at end of line  [2mno-eol-whitespace[22m
+
 src/pages/NotFoundPage/ui/NotFoundPage-hacker.module.scss
  [2m176:12[22m  [31m[31m✖[39m  Expected keyframe name to be kebab-case  [2mkeyframes-name-pattern[22m
  [2m188:12[22m  [31m[31m✖[39m  Expected keyframe name to be kebab-case  [2mkeyframes-name-pattern[22m
 
 src/pages/NotFoundPage/ui/NotFoundPage-matrix.module.scss
  [2m110:12[22m  [31m[31m✖[39m  Expected keyframe name to be kebab-case  [2mkeyframes-name-pattern[22m
+
+src/shared/ui/Button/Button.module.scss
+  [2m2:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+  [2m3:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+  [2m7:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+  [2m8:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+  [2m9:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m10:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m14:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m15:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m16:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+ [2m17:5[22m  [31m[31m✖[39m  Expected indentation of 2 spaces  [2mindentation[22m
+
+src/widgets/LangSwitcher/ui/LangSwitcher.module.scss
+ [2m6:2[22m  [31m[31m✖[39m  Unexpected whitespace at end of line  [2mno-eol-whitespace[22m
+
+src/widgets/PageError/ui/PageError.module.scss
+ [2m56:28[22m  [31m[31m✖[39m  Expected modern color-function notation  [2mcolor-function-notation[22m
+ [2m56:42[22m  [31m[31m✖[39m  Expected "0.2" to be "20%"               [2malpha-value-notation[22m
+ [2m70:12[22m  [31m[31m✖[39m  Expected keyframe name to be kebab-case  [2mkeyframes-name-pattern[22m
 
 src/widgets/PageLoader/ui/PageLoader.module.scss
  [2m41:15[22m  [31m[31m✖[39m  Expected newline after ":" with a multi-line declaration  [2mdeclaration-colon-newline-after[22m
@@ -31,6 +54,10 @@ src/widgets/PageLoader/ui/PageLoader.module.scss
  [2m80:15[22m  [31m[31m✖[39m  Expected newline after ":" with a multi-line declaration  [2mdeclaration-colon-newline-after[22m
 
 src/widgets/ThemeSwitcher/ui/ThemeSwitcher.module.scss
- [2m1:1[22m  [31m[31m✖[39m  Unexpected empty source  [2mno-empty-source[22m
+ [2m6:2[22m  [31m[31m✖[39m  Unexpected whitespace at end of line  [2mno-eol-whitespace[22m
 
-26 problems ([31m26 errors[39m, [33m0 warnings[39m)
+src/widgets/Sidebar/ui/Sidebar/Sidebar.module.scss
+ [2m21:2[22m  [31m[31m✖[39m  Expected indentation of 2 spaces      [2mindentation[22m
+ [2m42:2[22m  [31m[31m✖[39m  Unexpected whitespace at end of line  [2mno-eol-whitespace[22m
+
+43 problems ([31m43 errors[39m, [33m0 warnings[39m)

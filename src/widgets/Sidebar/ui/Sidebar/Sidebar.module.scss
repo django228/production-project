@@ -2,9 +2,12 @@
   height: calc(100vh - var(--navbar-height));
   width: var(--sidebar-width);
   background: var(--inverted-bg-color);
+  color: var(--inverted-primary-color);
 
   position: relative;
   transition: width 0.4s;
+  border-right: 1px solid var(--primary-color);
+  padding: 20px;
 }
 
 .collapsed {
@@ -15,5 +18,30 @@
   position: absolute;
   bottom: 20px;
   display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+.toggleBtn {
+  position: absolute;
+  top: 20px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  transition: all 0.3s;
+
+  &:hover {
+    background: var(--primary-color);
+    color: var(--bg-color);
+  }
 }

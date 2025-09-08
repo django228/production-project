@@ -17,7 +17,9 @@ export const Sidebar = ({ className }: SidebarProps) => {
 
     return (
         <div className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}>
-            <button onClick={onToggle}>toggle</button>
+            <button className={cls.toggleBtn} onClick={onToggle}>
+                {collapsed ? '»' : '«'}
+            </button>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher />
