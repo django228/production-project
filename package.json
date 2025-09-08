@@ -8,6 +8,7 @@
     "start": "webpack serve --env port=3000",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
+    "build:github": "cross-env GITHUB_PAGES=true webpack --env mode=production",
     "lint:ts": "eslint \"**/*.{ts,tsx}\" --config config/eslint/.eslintrc.js",
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --config config/eslint/.eslintrc.js --fix",
     "lint:scss": "stylelint \"**/*.scss\" --config config/stylelint/.stylelintrc.js",
