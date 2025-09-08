@@ -1,6 +1,5 @@
 Checking formatting...
 [warn] src/app/providers/ThemeProvider/ui/ThemeProvider.tsx
-[warn] src/app/router/ui/AppRouter.tsx
 [warn] src/app/styles/index.scss
 [warn] src/app/styles/reset.scss
 [warn] src/app/styles/themes/dark-theme.scss
@@ -17,7 +16,6 @@ Checking formatting...
 [warn] src/pages/NotFoundPage/ui/NotFoundPage.async.tsx
 [warn] src/pages/NotFoundPage/ui/NotFoundPage.module.scss
 [warn] src/pages/NotFoundPage/ui/NotFoundPage.tsx
-[warn] src/shared/config/i18n/i18n.ts
 [warn] src/shared/ui/AppLink/AppLink.module.scss
 [warn] src/shared/ui/AppLink/AppLink.tsx
 [warn] src/shared/ui/Button/Button.module.scss
@@ -28,4 +26,4 @@ Checking formatting...
 [warn] src/widgets/PageLoader/ui/PageLoader.module.scss
 [warn] src/widgets/Sidebar/ui/Sidebar/Sidebar.module.scss
 [warn] src/widgets/ThemeSwitcher/ui/ThemeSwitcher.module.scss
-[warn] Code style issues found in 29 files. Forgot to run Prettier?
+[warn] Code style issues found in 27 files. Forgot to run Prettier?
