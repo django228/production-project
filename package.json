@@ -2,7 +2,8 @@
   "name": "production-project",
   "version": "1.0.0",
   "description": "React TypeScript production project",
-  "private": true,
+ "private": true,
+  "homepage": "https://django228.github.io/production-project",
   "scripts": {
     "start": "webpack serve --env port=3000",
     "build:prod": "webpack --env mode=production",
