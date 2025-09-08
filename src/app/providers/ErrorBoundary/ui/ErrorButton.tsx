@@ -1,17 +1,10 @@
 import React from 'react';
-import {Button, ThemeButton} from "shared/ui/Button/Button";
+import { Button, ThemeButton } from 'shared/ui/Button/Button';
 
 const ErrorButton = () => {
+    const ThrowError = () => {};
 
-    const ThrowError = () => {
-        
-    }
-
-    return (
-        <Button theme={ThemeButton.CLEAR} onClick={(ThrowError) => {}}>
-
-        </Button>
-    );
+    return <Button theme={ThemeButton.CLEAR} onClick={(ThrowError) => {}} />;
 };
 
 export default ErrorButton;

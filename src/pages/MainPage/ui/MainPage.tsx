@@ -11,7 +11,7 @@ const MainPage = () => {
         <div style={{ padding: '20px' }}>
             <h1>{t('Добро пожаловать на главную страницу')}</h1>
             <p>{t('Это демонстрационное приложение с переключением тем и языками.')}</p>
-            
+
             <div style={{ marginTop: '20px' }}>
                 <h2>{t('Функции приложения')}</h2>
                 <ul>
@@ -21,10 +21,14 @@ const MainPage = () => {
                     <li>{t('Ленивая загрузка страниц')}</li>
                 </ul>
             </div>
-            
+
             <div style={{ marginTop: '20px' }}>
                 <h2>{t('Текущие настройки')}</h2>
-                <p>{t('Текущая тема')}: {theme}</p>
+                <p>
+                    {t('Текущая тема')}
+                    :
+                    {theme}
+                </p>
                 <Button theme={ThemeButton.OUTLINE} onClick={toggleTheme}>
                     {t('Переключить тему')}
                 </Button>
