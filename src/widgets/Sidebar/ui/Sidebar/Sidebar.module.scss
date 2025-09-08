@@ -18,7 +18,7 @@
   position: absolute;
   bottom: 20px;
   display: flex;
- flex-direction: column;
+  flex-direction: column;
   gap: 10px;
   align-items: center;
   width: 100%;
@@ -39,7 +39,7 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s;
-  
+
   &:hover {
     background: var(--primary-color);
     color: var(--bg-color);

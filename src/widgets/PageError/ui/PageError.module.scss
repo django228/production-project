@@ -53,7 +53,7 @@
     background: var(--secondary-color);
     border-color: var(--secondary-color);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgb(0 0 0 / 20%);
   }
 
   &:active {
