@@ -2,7 +2,7 @@
   "name": "production-project",
   "version": "1.0.0",
   "description": "React TypeScript production project",
- "private": true,
+  "private": true,
   "homepage": "https://django228.github.io/production-project",
   "scripts": {
     "start": "webpack serve --env port=3000",
@@ -58,6 +58,7 @@
     "babel-loader": "^8.2.3",
     "babel-plugin-i18next-extract": "^0.8.3",
     "copy-webpack-plugin": "^10.2.4",
+    "cross-env": "^10.0.0",
     "css-loader": "^6.6.0",
     "cz-customizable": "^7.4.0",
     "eslint": "^8.10.0",
