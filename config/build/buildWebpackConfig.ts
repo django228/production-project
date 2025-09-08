@@ -15,6 +15,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
             filename: 'bundle.js',
             path: paths.build,
             clean: true,
+            publicPath: options.isDev ? '/' : (process.env.GITHUB_PAGES ? '/production-project/' : '/'),
         },
         plugins: buildPlugins(options),
         module: {
