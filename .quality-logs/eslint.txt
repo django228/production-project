@@ -4,9 +4,6 @@
   29:13  error    Must use destructuring state assignment  react/destructuring-assignment
   38:16  error    Must use destructuring props assignment  react/destructuring-assignment
 
-/home/runner/work/production-project/production-project/src/app/router/ui/AppRouter.tsx
-  3:29  error  'shared/config/routeConfig/routeConfig' imported multiple times  import/no-duplicates
-  5:27  error  'shared/config/routeConfig/routeConfig' imported multiple times  import/no-duplicates
 
 /home/runner/work/production-project/production-project/src/index.tsx
   3:1  error  `./app/App` import should occur after import of `app/providers/ErrorBoundary`  import/order
@@ -41,5 +38,4 @@
 /home/runner/work/production-project/production-project/src/widgets/PageError/ui/PageError.tsx
   19:48  error  disallow literal string  i18next/no-literal-string
 
-✖ 26 problems (25 errors, 1 warning)
-  1 error and 0 warnings potentially fixable with the `--fix` option.
+

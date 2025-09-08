@@ -27,4 +27,4 @@ Checking formatting...
 [warn] src/widgets/PageLoader/ui/PageLoader.module.scss
 [warn] src/widgets/Sidebar/ui/Sidebar/Sidebar.module.scss
 [warn] src/widgets/ThemeSwitcher/ui/ThemeSwitcher.module.scss
-[warn] Code style issues found in 28 files. Forgot to run Prettier?
+
