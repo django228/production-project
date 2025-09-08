@@ -4,10 +4,6 @@
   29:13  error    Must use destructuring state assignment  react/destructuring-assignment
   38:16  error    Must use destructuring props assignment  react/destructuring-assignment
 
-/home/runner/work/production-project/production-project/src/app/router/ui/AppRouter.tsx
-  3:29  error  'shared/config/routeConfig/routeConfig' imported multiple times  import/no-duplicates
-  5:27  error  'shared/config/routeConfig/routeConfig' imported multiple times  import/no-duplicates
-
 /home/runner/work/production-project/production-project/src/index.tsx
   3:1  error  `./app/App` import should occur after import of `app/providers/ErrorBoundary`  import/order
 
@@ -32,28 +28,6 @@
   55:65  error  disallow literal string                                          i18next/no-literal-string
   60:80  error  disallow literal string                                          i18next/no-literal-string
 
-/home/runner/work/production-project/production-project/src/shared/config/i18n/i18n.ts
-   1:18  error  Strings must use singlequote                   quotes
-   2:34  error  Strings must use singlequote                   quotes
-   3:21  error  Strings must use singlequote                   quotes
-   4:30  error  Strings must use singlequote                   quotes
-   7:1   error  Expected indentation of 4 spaces but found 2   indent
-   8:1   error  Expected indentation of 4 spaces but found 2   indent
-   9:1   error  Expected indentation of 4 spaces but found 2   indent
-  10:1   error  Expected indentation of 4 spaces but found 2   indent
-  11:1   error  Expected indentation of 8 spaces but found 4   indent
-  11:18  error  Strings must use singlequote                   quotes
-  12:1   error  Expected indentation of 8 spaces but found 4   indent
-  13:1   error  Expected indentation of 8 spaces but found 4   indent
-  14:1   error  Expected indentation of 12 spaces but found 6  indent
-  15:1   error  Expected indentation of 8 spaces but found 4   indent
-  16:1   error  Expected indentation of 8 spaces but found 4   indent
-  17:1   error  Expected indentation of 12 spaces but found 6  indent
-  17:30  error  Strings must use singlequote                   quotes
-  17:63  error  Strings must use singlequote                   quotes
-  18:1   error  Expected indentation of 8 spaces but found 4   indent
-  19:1   error  Expected indentation of 4 spaces but found 2   indent
-
 /home/runner/work/production-project/production-project/src/shared/ui/Button/Button.stories.tsx
   1:1  error  Do not import renderer package "@storybook/react" directly. Use a framework package instead (e.g. @storybook/nextjs, @storybook/react-vite, @storybook/react-webpack5, @storybook/react-native-web-vite, @storybook/experimental-nextjs-vite)  storybook/no-renderer-packages
 
@@ -63,5 +37,4 @@
 /home/runner/work/production-project/production-project/src/widgets/PageError/ui/PageError.tsx
   19:48  error  disallow literal string  i18next/no-literal-string
 
-✖ 46 problems (45 errors, 1 warning)
-  21 errors and 0 warnings potentially fixable with the `--fix` option.
+✖ 24 problems (23 errors, 1 warning)
