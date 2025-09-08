@@ -20,3 +20,26 @@
   flex-grow: 1;
   padding: 20px;
 }
+
+h1 {
+  font: var(--font-xl);
+  margin-bottom: var(--gap-m);
+}
+
+h2 {
+  font: var(--font-l);
+  margin: var(--gap-l) 0 var(--gap-m) 0;
+}
+
+p {
+  margin-bottom: var(--gap-m);
+}
+
+ul {
+  margin: var(--gap-m) 0;
+  padding-left: var(--gap-l);
+}
+
+li {
+  margin-bottom: var(--gap-s);
+}
