@@ -1,0 +1,15 @@
+{
+  "О сайте" : "About site",
+  "О нашем приложении": "About our application",
+  "Это учебный проект, демонстрирующий современные подходы к разработке веб-приложений.": "This is a learning project demonstrating modern approaches to web application development.",
+  "Технологии": "Technologies",
+  "Архитектура": "Architecture",
+  "Проект следует подходу Feature-Sliced Design для организации кода.": "The project follows the Feature-Sliced Design approach for code organization.",
+  "Структура включает в себя:": "The structure includes:",
+  "app - основная конфигурация приложения": "app - main application configuration",
+  "pages - страницы приложения": "pages - application pages",
+  "widgets - самостоятельные блоки страниц": "widgets - self-contained page blocks",
+  "features - бизнес-логика приложения": "features - application business logic",
+  "entities - бизнес-сущности": "entities - business entities",
+  "shared - переиспользуемые модули": "shared - reusable modules"
+}
