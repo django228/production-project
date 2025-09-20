@@ -18,7 +18,11 @@
     "test": "jest",
     "unit": "jest --config ./config/jest/jest.config.ts",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "deploy": "node deploy.js",
+    "deploy:github": "node deploy.js github",
+    "deploy:vercel": "node deploy.js vercel",
+    "deploy:netlify": "node deploy.js netlify"
   },
   "config": {
     "commitizen": {

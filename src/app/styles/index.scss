@@ -1,5 +1,6 @@
 @import "themes/dark-theme";
 @import "themes/light-theme";
+@import "themes/book-theme";
 @import "variables/global";
 @import "reset";
 
@@ -14,11 +15,25 @@
 
 .content-page {
   display: flex;
+  margin-left: var(--sidebar-width);
+  min-height: calc(100vh - var(--navbar-height));
+  padding-top: var(--navbar-height);
+  box-sizing: border-box;
+  transition: margin-left 0.4s;
 }
 
 .page-wrapper {
   flex-grow: 1;
   padding: 20px;
+}
+
+// When sidebar is collapsed, adjust margin
+.app .content-page {
+  margin-left: var(--sidebar-width);
+}
+
+.app .content-page.sidebar-collapsed {
+  margin-left: var(--sidebar-width-collapsed);
 }
 
 h1 {

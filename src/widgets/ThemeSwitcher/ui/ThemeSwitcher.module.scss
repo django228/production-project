@@ -1,10 +1,42 @@
-.icon {
-  width: 32px;
-  height: 32px;
+.ThemeSwitcher {
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
 
-  &:hover {
-    transform: scale(1.1);
-  }
+.ThemeSwitcher:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Ensure good visibility in dark theme */
+:global(.app.dark) .ThemeSwitcher {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+:global(.app.dark) .ThemeSwitcher:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Ensure good visibility in book theme */
+:global(.app.book) .ThemeSwitcher {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+:global(.app.book) .ThemeSwitcher:hover {
+  background: rgba(255, 255, 255, 0.3);
 }

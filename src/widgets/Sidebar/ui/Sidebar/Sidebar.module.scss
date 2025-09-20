@@ -1,13 +1,19 @@
 .Sidebar {
-  height: calc(100vh - var(--navbar-height));
+  height: 100vh;
   width: var(--sidebar-width);
   background: var(--inverted-bg-color);
   color: var(--inverted-primary-color);
 
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
   transition: width 0.4s;
   border-right: 1px solid var(--primary-color);
   padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .collapsed {
@@ -44,4 +50,75 @@
     background: var(--primary-color);
     color: var(--bg-color);
   }
+}
+
+.chapterList {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+.chapterListTitle {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--inverted-primary-color);
+  border-bottom: 1px solid var(--primary-color);
+  padding-bottom: 10px;
+}
+
+.chapterListItems {
+  list-style: none;
+ padding: 0;
+  margin: 0;
+}
+
+.chapterItem {
+  margin-bottom: 10px;
+}
+
+.chapterLink {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 4px;
+  color: var(--inverted-primary-color);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9em;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+  }
+}
+
+/* Collapsed state styles */
+.collapsedContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.collapsedIcon {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--inverted-primary-color);
+}
+
+.collapsedLabel {
+  font-size: 12px;
+  text-align: center;
+ color: var(--inverted-primary-color);
+  transform: rotate(90deg);
+  white-space: nowrap;
+  width: 100px;
 }

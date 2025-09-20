@@ -1,9 +1,9 @@
 .app.dark {
-  --bg-color: #090949;
-  --inverted-bg-color: #e8e8ea;
-
-  --primary-color: #049604;
-  --secondary-color: #04ff04;
-  --inverted-primary-color: #0232c2;
-  --inverted-secondary-color: #0452ff;
+  --bg-color: #1e1e1e; /* Darker, more neutral background */
+  --inverted-bg-color: #f0f0f0; /* Light gray instead of blue */
+  
+  --primary-color: #e0e0e0; /* Light gray for text */
+  --secondary-color: #b0b0b0; /* Medium light gray */
+  --inverted-primary-color: #2a2a2a; /* Dark gray */
+  --inverted-secondary-color: #4a4a4a; /* Medium dark gray */
 }

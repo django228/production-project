@@ -1,0 +1,69 @@
+.bookContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Georgia, serif;
+  line-height: 1.6;
+}
+
+.bookTitle {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+  font-weight: normal;
+  border-bottom: 1px solid var(--primary-color);
+  padding-bottom: 15px;
+}
+
+.chapterTitle {
+  font-size: 1.8em;
+  margin: 30px 0 20px 0;
+  color: var(--primary-color);
+  font-weight: normal;
+}
+
+.dedication {
+  font-style: italic;
+  text-align: center;
+  margin: 20px 0;
+  padding: 15px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.paragraph {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.quote {
+  font-style: italic;
+  margin: 15px 0;
+  padding-left: 20px;
+  border-left: 3px solid var(--primary-color);
+  color: #555;
+}
+
+.centeredImage {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+ border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.divider {
+  margin: 30px 0;
+  border: 0;
+  height: 1px;
+  background: #ddd;
+}
+
+.additionalContent {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+}

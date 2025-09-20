@@ -1,0 +1,13 @@
+.app.book {
+  --bg-color: #f5f1e0; /* Warm cream color like paper */
+  --inverted-bg-color: #2a2a2a; /* Dark gray for contrast */
+  
+  --primary-color: #4a4a4a; /* Dark gray for text, easy on eyes */
+  --secondary-color: #6a6a6a; /* Slightly lighter gray */
+  --inverted-primary-color: #f5f1e0; /* Cream color for inverted text */
+  --inverted-secondary-color: #e0d8c0; /* Lighter cream for secondary inverted text */
+  
+  /* Additional book-like variables */
+  --book-border-color: #d9d0b5; /* Subtle border color */
+  --book-highlight-color: #e0d8c0; /* Highlight color */
+}
